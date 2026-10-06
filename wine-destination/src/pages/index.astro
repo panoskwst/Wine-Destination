@@ -1,17 +1,27 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/hero.astro";
+import Facts from "../components/facts.astro";
+import Destination from "../components/destination.astro";
+import Wineries from "../components/wineries.astro";
+import Experience from "../components/experience.astro";
+import SeeMore from "../components/seeMore.astro";
+import Route from "../components/route.astro";
+import CheckList from "../components/checkList.astro";
+import Tips from "../components/tips.astro";
+import { site } from "../site";
 
+const h = site.home;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+	<Hero />
+	<Facts />
+	<Destination />
+	<Wineries />
+	<Experience />
+	<SeeMore />
+	<Route />
+	<CheckList />
+	<Tips />
+</BaseLayout>
