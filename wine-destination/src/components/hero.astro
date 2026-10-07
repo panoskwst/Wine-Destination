@@ -1,14 +1,14 @@
 ---
-
+const {state, h1, lead} = Astro.props;
 ---
 
 <section class="hero">
     <div class="container hero-content">
         <p class="eyebrow">
-            Δρόμοι του κρασιού • {site.state}
+            Δρόμοι του κρασιού • {state}
         </p>
-        <h1>{site.h1}</h1>
-        <p class="lead">{site.lead}</p>
+        <h1>{h1}</h1>
+        <p class="lead">{lead}</p>
         <a href="#route">Δείτε τη Διαδρομή</a>
     </div>
 </section>

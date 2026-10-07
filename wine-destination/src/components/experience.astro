@@ -1,27 +1,29 @@
 ---
-
+interface Feature {
+    h3: string;
+    content: string;
+}
+interface Props {
+    h2: string;
+    features: Feature[];
+}
+const {h2, features} = Astro.props;
 ---
 
 <section class="section" id="experience">
     <div class="container">
         <div class="section-head">
-            <p class="eyebrow">
-
-            </p>
-            <h2>
-                {site.h2}
-            </h2>
+            <p class="eyebrow">Γεύση & φιλοξενία</p>
+            <h2>{h2}</h2>
         </div>
         <div class="wide-grid">
             <!-- Do map article -->
-            <article>
-                <h3>
-                    Που να φάτε
-                </h3>
-                <p>
-                    {site.content}
-                </p>
-            </article>
+            {features.map(({h3, content}) => 
+                <article>
+                    <h3>{h3}</h3>
+                    <p>{content}</p>
+                </article>
+            )}
         </div>
     </div>
 </section>

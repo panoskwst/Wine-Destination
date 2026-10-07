@@ -1,5 +1,5 @@
 ---
-
+const {h2, content, wineries} = Astro.props;
 ---
 
 <section class="section section-soft" id="wineries">
@@ -8,11 +8,21 @@
             <p class="eyebrow">
                 Οινοποιεία
             </p>
-            <h2>{site.h2}</h2>
-            <p>{site.content}</p>
+            <h2>{h2}</h2>
+            <p>{content}</p>
         </div>
         <div class="cards">
-            
+            {wineries.map(([i, a, t, n, d, l, c ]) =>
+                <article class="card">
+                    <img class="card-image" src={i} alt={a} />
+                    <div class="card-body">
+                        <div class="card-kicker">{t}</div>
+                        <h3>{n}</h3>
+                        <p>{d}</p>
+                        <a class="text-link" href={l} target="_blank" rel="noopener">{c}</a>
+                    </div>
+                </article>
+            )}
         </div>
     </div>
 </section>

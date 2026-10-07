@@ -11,17 +11,25 @@ import CheckList from "../components/checkList.astro";
 import Tips from "../components/tips.astro";
 import { site } from "../site";
 
-const h = site.home;
+const h = site.hero;
+const f = site.facts;
+const d = site.destination;
+const w = site.wineries;
+const e = site.experience;
+const s = site.seeMore;
+const r = site.route;
+const c = site.checkList;
+const t = site.ykTips;
 ---
 
 <BaseLayout>
-	<Hero />
-	<Facts />
-	<Destination />
-	<Wineries />
-	<Experience />
-	<SeeMore />
-	<Route />
-	<CheckList />
-	<Tips />
+	<Hero state={h.state} h1={h.h1} lead={h.lead} />
+	<Facts  />
+	<Destination image={d.image} alt={d.alt} h2={d.h2} content={d.content} quote={d.quote} />
+	<Wineries h2={w.h2} content={w.content} wineries={w.wineries} />
+	<Experience h2={e.h2} features={e.feature} />
+	<SeeMore h2={s.h2} content={s.content} pills={s.pills} />
+	<Route h2={r.h2} content={r.content} days={r.days} />
+	<CheckList h2={c.h2} list={c.list} />
+	<Tips h2={t.h2} tips={t.tips} />
 </BaseLayout>

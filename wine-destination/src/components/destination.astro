@@ -1,24 +1,22 @@
 ---
-import { site } from "../site";
-
-
+const {image, alt, h2, content, quote} = Astro.props;
 ---
 
 <section class="section" id="destination">
     <div class="container intro">
-        <img src={site.img} alt={site.alt}>
+        <img src={image} alt={alt}>
         <div class="copy">
             <p class="eyebrow">
                 Ο Προορισμός
             </p>
             <h2>
-                {site.h2}
+                {h2}
             </h2>
             <p>
-                {site.content}
+                {content}
             </p>
             <div class="quote">
-                {site.quote}
+                {quote}
             </div>
         </div>
     </div>
