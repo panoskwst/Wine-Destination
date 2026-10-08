@@ -1,20 +1,38 @@
 ---
-
+interface Day {
+    kicker: string;
+    h3: string;
+    list: string[];
+}
+interface Props {
+    h2: string;
+    content: string;
+    days: Day[];
+}
+const {h2, content, days} = Astro.props;
 ---
 
-<section class="section section-soft" id="route">
+<section class="section-soft" id="route">
     <div class="container">
         <div class="section-head">
             <p class="eyebrow">
                 Πρόγραμμα
             </p>
-            <h2>
-                {site.h2}
-            </h2>
-            <p>{site.content}</p>
+            <h2>{h2}</h2>
+            <p>{content}</p>
         </div>
         <div class="wide-grid">
-            
+            {days.map(({kicker, h3, list}) => 
+                <article class="day">
+                    <div class="card-kicker">{kicker}</div>
+                    <h3>{h3}</h3>
+                    <ul>
+                        {list.map(( item ) => 
+                            <li>{item}</li>
+                        )}
+                    </ul>
+                </article>
+            )}
         </div>
     </div>
 </section>

@@ -1,5 +1,13 @@
 ---
-
+interface List {
+    h3: string;
+    content: string;
+}
+interface Props {
+    h2: string;
+    list: List[];
+}
+const {h2, list} = Astro.props;
 ---
 
 <section>
@@ -8,12 +16,17 @@
             <p class="eyebrow">
                 Wine checklist
             </p>
-            <h2>
-                {site.h2}
-            </h2>
+            <h2>{h2}</h2>
         </div>
         <div class="cards">
-            
+            {list.map(({h3, content}) => 
+                <article>
+                    <div class="card-body">
+                        <h3>{h3}</h3>
+                        <p>{content}</p>
+                    </div>
+                </article>
+            )}
         </div>
     </div>
 </section>

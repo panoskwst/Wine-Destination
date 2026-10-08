@@ -1,11 +1,70 @@
 ---
+interface Facts {
+    title: string;
+    fact: string;
+}
+interface Props {
+    facts: Facts[];
+}
 const {facts} = Astro.props;
 ---
 
-<section>
+<section class="facts">
     <div class="container facts-grid">
-        <div class="fact">
-            
-        </div>
+        {facts.map(({title, fact}) => 
+            <div class="fact">
+                <small>{title}</small>
+                <strong>{fact}</strong>
+            </div>
+        )}
     </div>
 </section>
+<style>
+    .facts {
+        position: relative;
+        z-index: 3;
+        margin-top: -34px;
+    }
+    .facts-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow: hidden;
+        border-radius: var(--radius);
+        background: #fff;
+        box-shadow: var(--shadow);
+    }
+    .fact {
+        padding: 25px 22px;
+        border-right: 1px solid var(--line);
+    }
+    .fact:last-child {
+        border: 0;
+    }
+    .fact small {
+        display: block;
+        color: var(--muted);
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+    }
+    .fact strong {
+        display: block;
+        margin-top: 5px;
+        color: var(--wine);
+    }
+    @media (max-width: 850px) { 
+        .facts-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (max-width: 560px) {
+        .facts-grid {
+            grid-template-columns: 1fr;
+        }
+        .fact {
+            border-right: 0;
+            border-bottom: 1px solid var(--line);
+        }
+    }
+</style>

@@ -1,20 +1,60 @@
 ---
-
+interface Pills {
+    location: string;
+    description: string;
+}
+interface Props {
+    h2: string;
+    content: string;
+    pills: Pills[];
+}
+const {h2, content, pills} = Astro.props;
 ---
 
-<section class="section section-dark">
+<section class="section-dark">
     <div class="container">
         <div class="section-head">
             <p class="eyebrow">
-
+                Αξιοθέατα
             </p>
-            <h2>{site.h2}</h2>
-            <p>
-                {site.content}
-            </p>
+            <h2>{h2}</h2>
+            <p>{content}</p>
         </div>
         <div class="pill-grid">
-            
+            {pills.map(({location, description}) => 
+                <div class="pill">
+                    <strong>{location}</strong>
+                    {description}
+                </div>
+            )}
         </div>
     </div>
 </section>
+
+<style>
+    .pill-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    .pill {
+        padding: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.07);
+    }
+    .pill strong {
+        display: block;
+        color: #f2c7b1;
+    }
+    @media (max-width: 850px) { 
+        .pill-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (max-width: 560px) {
+        .pill-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

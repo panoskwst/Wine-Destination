@@ -3,7 +3,26 @@ export default {
     title: "Ο Δρόμος του Κρασιού της Φλώρινας",
     desc: "Ο Δρόμος του Κρασιού της Φλώρινας: οινοποιεία Αμυνταίου, Ξινόμαυρο, λίμνες, Νυμφαίο, Πρέσπες, γαστρονομία και ολοκληρωμένη διήμερη διαδρομή.",
     url: "",
-    theme: {},
+    color: "#711c2f",
+    theme: {wine: "#711c2f", dark: "#3f0d1a", rose: "#a8465b", cream: "#f7f1e8", ink: "#201d1e", muted: "#746d70", line: "rgba(32, 29, 30, 0.13);", shadow: "0 18px 50px rgba(46, 17, 24, 0.12);", radius: "22px", max: "1180px"},
+    nav: [
+        {
+            title: "Προορισμός",
+            link: "#destination",
+        },
+        {
+            title: "Οινοποιεία",
+            link: "#wineries",
+        },
+        {
+            title: "Διαδρομή",
+            link: "route",
+        },
+        {
+            title: "Tips",
+            link: "#tips",
+        },
+    ],
     hero: {
         state: "Δυτική Μακεδονία",
         h1: "Η οινική Φλώρινα των <em>λιμνών</em>",

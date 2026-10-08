@@ -10,14 +10,13 @@ interface Props {
 const {h2, features} = Astro.props;
 ---
 
-<section class="section" id="experience">
+<section id="experience">
     <div class="container">
         <div class="section-head">
             <p class="eyebrow">Γεύση & φιλοξενία</p>
             <h2>{h2}</h2>
         </div>
         <div class="wide-grid">
-            <!-- Do map article -->
             {features.map(({h3, content}) => 
                 <article>
                     <h3>{h3}</h3>
@@ -27,3 +26,21 @@ const {h2, features} = Astro.props;
         </div>
     </div>
 </section>
+
+<style>
+    .feature,
+    .day {
+        padding: 30px;
+        border-radius: var(--radius);
+        background: #fff;
+        box-shadow: var(--shadow);
+    }
+    .feature p,
+    .day li {
+        color: var(--muted);
+    }
+    .day ul {
+        padding-left: 20px;
+    }
+
+</style>

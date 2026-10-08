@@ -21,3 +21,37 @@ const {image, alt, h2, content, quote} = Astro.props;
         </div>
     </div>
 </section>
+
+<style>
+    .intro {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 70px;
+        align-items: center;
+    }
+    .intro img {
+        height: 590px;
+        object-fit: cover;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+    }
+    .copy p {
+        color: var(--muted);
+    }
+    .quote {
+        padding: 22px 25px;
+        border-left: 4px solid var(--wine);
+        background: var(--cream);
+        font-family: "Playfair Display", serif;
+        font-size: 1.22rem;
+        font-style: italic;
+    }
+     @media (max-width: 850px) { 
+        .intro {
+            grid-template-columns: 1fr;
+        }
+        .intro img {
+            height: 430px;
+        }
+    }
+</style>

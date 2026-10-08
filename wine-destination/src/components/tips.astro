@@ -1,5 +1,13 @@
 ---
-
+interface Tips{
+    h3: string;
+    content: string;
+}
+interface Props {
+    h2: string;
+    tips: Tips[];
+}
+const {h2, tips} = Astro.props;
 ---
 
 <section class="section section-dark" id="tips">
@@ -8,10 +16,42 @@
             <p class="eyebrow">
                 Youweekly Tips
             </p>
-            <h2>{site.h2}</h2>
+            <h2>{h2}</h2>
         </div>
         <div class="tips">
-            
+            {tips.map(({h3, content}) =>
+                <article class="tip">
+                    <h3>{h3}</h3>
+                    <p>{content}</p>
+                </article>
+            )}
         </div>
     </div>
 </section>
+
+<style>
+    .tips {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+    .tip {
+        background-color: rgba(255, 255, 255, 0.08);
+        box-shadow: none;
+        padding: 30px;
+        border-radius: var(--radius);
+        background: #fff;
+        box-shadow: var(--shadow);
+    }
+    .tip h3 {
+        color: #f2c7b1;
+    }
+    .tip p {
+        color: rgba(255, 255, 255, 0.76);
+    }
+    @media (max-width: 560px) {
+        .tips {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

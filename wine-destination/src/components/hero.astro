@@ -12,3 +12,57 @@ const {state, h1, lead} = Astro.props;
         <a href="#route">Δείτε τη Διαδρομή</a>
     </div>
 </section>
+<style>
+    .hero {
+        min-height: 78vh;
+        display: grid;
+        align-items: end;
+        color: #fff;
+        background:
+            linear-gradient(90deg, rgba(28, 4, 10, 0.9), rgba(28, 4, 10, 0.42) 58%, rgba(28, 4, 10, 0.16)),
+            url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2000&q=88")
+                center/cover;
+    }
+    .hero-content {
+        max-width: 850px;
+        padding: 115px 0 90px;
+    }
+    .hero .eyebrow {
+        color: #f2c7b1;
+    }
+    .hero h1 {
+        font-size: clamp(3rem, 7.5vw, 6.8rem);
+        letter-spacing: -0.045em;
+    }
+    .hero h1 em {
+        color: #f2c7b1;
+    }
+    .lead {
+        max-width: 750px;
+        margin: 26px 0 30px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: clamp(1rem, 1.8vw, 1.22rem);
+    }
+    .btn {
+        display: inline-flex;
+        min-height: 48px;
+        padding: 0 22px;
+        align-items: center;
+        border-radius: 999px;
+        background: var(--wine);
+        color: #fff;
+        font-size: 0.84rem;
+        font-weight: 800;
+        text-decoration: none;
+    }
+    @media (max-width: 850px) { 
+        .hero {
+            min-height: 70vh;
+        }
+    }
+    @media (max-width: 560px) {
+        .hero-content {
+            padding: 90px 0 72px;
+        }
+    }
+</style>
