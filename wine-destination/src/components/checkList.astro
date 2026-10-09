@@ -20,7 +20,7 @@ const {h2, list} = Astro.props;
         </div>
         <div class="cards">
             {list.map(({h3, content}) => 
-                <article>
+                <article class="card">
                     <div class="card-body">
                         <h3>{h3}</h3>
                         <p>{content}</p>

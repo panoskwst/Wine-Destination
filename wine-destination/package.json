@@ -1,13 +1,14 @@
 {
   "name": "wine-destination",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "engines": {
     "node": ">=22.12.0"
   },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:florina": "SITE_ID=fl astro build --outDir dist/florina",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -16,5 +17,8 @@
   },
   "allowScripts": {
     "esbuild": true
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }

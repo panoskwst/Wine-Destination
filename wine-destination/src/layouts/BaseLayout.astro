@@ -3,7 +3,7 @@ import { site } from "../site";
 const { title, description = "" } = Astro.props;
 const t = site.theme;
 const nav = site.nav;
-const canonical = new URL(Astro.url.pathname, site.url).href;
+// const canonical = new URL(Astro.url.pathname, site.url).href;
 ---
 
 <html lang="el" style={`--wine:${t.wine};--dark:${t.dark};--rose:${t.rose};--cream:${t.cream};--ink:${t.ink};--muted:${t.muted};--line:${t.line};--shadow:${t.shadow};--radius${t.radius};--max:${t.max};`}>
@@ -102,6 +102,17 @@ const canonical = new URL(Astro.url.pathname, site.url).href;
         border-bottom: 1px solid var(--line);
         background: rgba(255, 255, 255, 0.94);
         backdrop-filter: blur(15px);
+    }
+    .brand {
+        color: var(--wine);
+        font-size: clamp(1.25rem, 2.3vw, 1.8rem);
+        font-weight: 900;
+        letter-spacing: -0.055em;
+        text-decoration: none;
+    }
+    .brand span {
+        color: var(--ink);
+        font-weight: 500;
     }
     .nav {
         min-height: 72px;
