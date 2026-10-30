@@ -1,6 +1,6 @@
-import florina from "../destinations/florina";
+import mesogia from "../destinations/mesogia";
 
-const all = {florina};
+const all = {mesogia};
 const id  = import.meta.env.SITE_ID as keyof typeof all;
 if (!all[id]) throw new Error(`Set SITE_ID to one of: ${Object.keys(all).join(",")}`);
 

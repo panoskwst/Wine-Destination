@@ -9,7 +9,7 @@ interface Props {
 const {facts} = Astro.props;
 ---
 
-<section class="facts">
+<div class="facts">
     <div class="container facts-grid">
         {facts.map(({title, fact}) => 
             <div class="fact">
@@ -18,7 +18,7 @@ const {facts} = Astro.props;
             </div>
         )}
     </div>
-</section>
+</div>
 <style>
     .facts {
         position: relative;
@@ -27,7 +27,7 @@ const {facts} = Astro.props;
     }
     .facts-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         overflow: hidden;
         border-radius: var(--radius);
         background: #fff;

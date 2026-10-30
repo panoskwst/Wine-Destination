@@ -6,7 +6,7 @@ const nav = site.nav;
 // const canonical = new URL(Astro.url.pathname, site.url).href;
 ---
 
-<html lang="el" style={`--wine:${t.wine};--dark:${t.dark};--rose:${t.rose};--cream:${t.cream};--ink:${t.ink};--muted:${t.muted};--line:${t.line};--shadow:${t.shadow};--radius${t.radius};--max:${t.max};`}>
+<html lang="el" style={`--wine:${t.wine};--dark:${t.dark};--rose:${t.rose};--cream:${t.cream};--ink:${t.ink};--muted:${t.muted};--line:${t.line};--shadow:${t.shadow};--radius:${t.radius};--max:${t.max};`}>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -162,6 +162,18 @@ const nav = site.nav;
         border-radius: var(--radius);
         background: #fff;
         box-shadow: 0 10px 30px rgba(46, 17, 24, 0.06);
+    }
+    .card,.pill{
+        transition: all 600ms ease;
+    }
+    .card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 25px 30px #2e11180f;
+        transition: all 300ms ease;
+    }
+    .pill:hover {
+        transform: translateY(-10px);
+        transition: transform 300ms ease;
     }
     .card-body {
         padding: 25px;

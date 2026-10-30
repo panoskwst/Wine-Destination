@@ -6,18 +6,10 @@ const {image, alt, h2, content, quote} = Astro.props;
     <div class="container intro">
         <img src={image} alt={alt}>
         <div class="copy">
-            <p class="eyebrow">
-                Ο Προορισμός
-            </p>
-            <h2>
-                {h2}
-            </h2>
-            <p>
-                {content}
-            </p>
-            <div class="quote">
-                {quote}
-            </div>
+            <p class="eyebrow">Ο Προορισμός</p>
+            <h2>{h2}</h2>
+            <p>{content}</p>
+            <div class="quote">{quote}</div>
         </div>
     </div>
 </section>

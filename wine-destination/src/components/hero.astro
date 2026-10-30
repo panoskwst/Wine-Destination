@@ -1,15 +1,25 @@
 ---
+interface Props {
+    state: string;
+    h1: string;
+    lead: string;
+}
+
 const {state, h1, lead} = Astro.props;
+const h1Parts = h1.split(/(<em>.*?<\/em>)/g);
 ---
 
 <section class="hero">
     <div class="container hero-content">
         <p class="eyebrow">
-            Δρόμοι του κρασιού • {state}
+            <a href="https://www.youweekly.gr/?page_id=797428">Δρόμοι του κρασιού</a> • {state}
         </p>
-        <h1>{h1}</h1>
+        <h1>
+            {h1Parts.map((part) =>
+                part.startsWith("<em>") && part.endsWith("</em>") ? <em>{part.slice(4, -5)}</em> : part
+            )}
+        </h1>
         <p class="lead">{lead}</p>
-        <a href="#route">Δείτε τη Διαδρομή</a>
     </div>
 </section>
 <style>
@@ -29,6 +39,9 @@ const {state, h1, lead} = Astro.props;
     }
     .hero .eyebrow {
         color: #f2c7b1;
+    }
+    .hero .eyebrow a {
+        text-decoration: none;
     }
     .hero h1 {
         font-size: clamp(3rem, 7.5vw, 6.8rem);
