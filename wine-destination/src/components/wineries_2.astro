@@ -1,0 +1,61 @@
+---
+interface CardLinks {
+    link: string;
+    text: string;
+}
+
+interface Wineries {
+    image: string;
+    alt: string;
+    kicker: string;
+    h3: string;
+    content: string;
+    link: string;
+    cta: string;
+    cardLinks: CardLinks[];
+}
+interface Props {
+    h2: string;
+    content: string;
+    wineries: Wineries[];
+}
+const {h2, content, wineries} = Astro.props;
+---
+
+<section class="section-soft" id="wineries">
+    <div class="container">
+        <div class="section-head">
+            <p class="eyebrow">
+                Οινοποιεία
+            </p>
+            <h2>{h2}</h2>
+            <p>{content}</p>
+        </div>
+        <div class="cards">
+            {wineries.map(({image, alt, kicker, h3, content, link, cta, cardLinks }) =>
+                <article class="card">
+                    <img class="card-image" src={image} alt={alt} />
+                    <div class="card-body">
+                        <div class="card-kicker">{kicker}</div>
+                        <h3>{h3}</h3>
+                        <p>{content}</p>
+                        <a class="text-link" href={link} target="_blank" rel="noopener">{cta}</a>
+                        <div class="card-links">
+                            {cardLinks.map(({link, text}) => 
+                                <a href={link} target="_blank" rel="noopener">{text}</a>
+                            )}
+                        </div>
+                    </div>
+                </article>
+            )}
+        </div>
+    </div>
+</section>
+
+<style>
+    .text-link {
+        color: var(--wine);
+        font-weight: 800;
+        text-decoration: none;
+    }
+</style>

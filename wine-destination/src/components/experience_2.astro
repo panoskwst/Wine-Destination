@@ -1,0 +1,71 @@
+---
+interface Feature {
+    h3: string;
+    content: string;
+    image: string;
+    eyebrow: string;
+    name: string;
+}
+interface Props {
+    h2: string;
+    features: Feature[];
+}
+const {h2, features} = Astro.props;
+---
+
+<section id="experience">
+    <div class="container">
+        <div class="section-head">
+            <p class="eyebrow">Γεύση & φιλοξενία</p>
+            <h2>{h2}</h2>
+        </div>
+        <div class="split">
+            {features.map(({h3, content, image, eyebrow}) => 
+                <article class="feature" style={`background-image: url(${image});`}>
+                    <div class="feature-content">
+                        <p class="eyebrow">{eyebrow}</p>
+                        <h3>{h3}</h3>
+                        <p>{content}</p>
+                    </div>
+                </article>
+            )}
+        </div>
+    </div>
+</section>
+
+<style>
+    .feature {
+        position: relative;
+        min-height: 470px;
+        display: flex;
+        align-items: end;
+        overflow: hidden;
+        border-radius: var(--radius);
+        color: #fff;
+        background-position: center;
+        background-size: cover;
+    }
+    .feature::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(26,5,10,.9), rgba(26,5,10,.05) 75%);
+    }
+    .feature-content {
+        position: relative;
+        padding: 34px;
+    }
+    .feature p {
+        max-width: 520px;
+        margin-top: 13px;
+        color: rgb(255, 255, 255, .82);
+    }
+    .eyebrow {
+        margin: 0 0 10px;
+        font-size: .76rem;
+        font-weight: 800;
+        letter-spacing: .17em;
+        text-transform: uppercase;
+    }
+
+</style>
