@@ -5,6 +5,7 @@ interface Wineries {
     kicker: string;
     h3: string;
     content: string;
+    tasting?: string;
     link: string;
     cta: string;
 }
@@ -24,13 +25,14 @@ const {h2, content, wineries} = Astro.props;
             <p>{content}</p>
         </div>
         <div class="cards">
-            {wineries.map(({image, alt, kicker, h3, content, link, cta }) =>
+            {wineries.map(({image, alt, kicker, h3, content, tasting, link, cta }) =>
                 <article class="card">
                     <img class="card-image" src={image} alt={alt} />
                     <div class="card-body">
                         <div class="card-kicker">{kicker}</div>
                         <h3>{h3}</h3>
                         <p>{content}</p>
+                        {tasting && <p class="wine-pick"><strong>Τι να δοκιμάσετε:</strong> {tasting}</p>}
                         <a class="text-link" href={link} target="_blank" rel="noopener">{cta}</a>
                     </div>
                 </article>
@@ -44,5 +46,14 @@ const {h2, content, wineries} = Astro.props;
         color: var(--wine);
         font-weight: 800;
         text-decoration: none;
+    }
+    .wine-pick {
+        margin-top: 17px;
+        padding: 15px;
+        border-left: 3px solid var(--rose);
+        border-radius: 0 12px 12px 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-size: .86rem;
     }
 </style>

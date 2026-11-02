@@ -1,7 +1,8 @@
 ---
 interface Feature {
     h3: string;
-    content: string;
+    content?: string;
+    list?: string[];
     image: string;
     eyebrow: string;
     name: string;
@@ -20,12 +21,24 @@ const {h2, features} = Astro.props;
             <h2>{h2}</h2>
         </div>
         <div class="split">
-            {features.map(({h3, content, image, eyebrow}) => 
+            {features.map(({h3, content, list, image, eyebrow}) => 
                 <article class="feature" style={`background-image: url(${image});`}>
                     <div class="feature-content">
                         <p class="eyebrow">{eyebrow}</p>
                         <h3>{h3}</h3>
-                        <p>{content}</p>
+                        {content && <p>{content}</p>}
+                        {list && (
+                            <ul class="list-clean">
+                                {list.map((item) => (
+                                    <li>
+                                        {item.split(/(<b>.*?<\/b>)/g).map((part) =>
+                                            part.startsWith("<b>") && part.endsWith("</b>")
+                                                ? <b>{part.slice(3, -4)}</b> : part
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                     </div>
                 </article>
             )}
@@ -34,6 +47,16 @@ const {h2, features} = Astro.props;
 </section>
 
 <style>
+    .split{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+    @media (max-width: 960px){
+        .intro-grid, .split {
+            grid-template-columns: 1fr;
+        }
+    }
     .feature {
         position: relative;
         min-height: 470px;
@@ -49,7 +72,7 @@ const {h2, features} = Astro.props;
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(0deg, rgba(26,5,10,.9), rgba(26,5,10,.05) 75%);
+        background: linear-gradient(rgba(26, 5, 10, .05), rgba(26, 5, 10, .65), rgba(26, 5, 10, .95));
     }
     .feature-content {
         position: relative;
@@ -58,7 +81,7 @@ const {h2, features} = Astro.props;
     .feature p {
         max-width: 520px;
         margin-top: 13px;
-        color: rgb(255, 255, 255, .82);
+        color: rgba(255, 255, 255, .82);
     }
     .eyebrow {
         margin: 0 0 10px;
@@ -66,6 +89,17 @@ const {h2, features} = Astro.props;
         font-weight: 800;
         letter-spacing: .17em;
         text-transform: uppercase;
+    }
+    .feature ul.list-clean {
+        margin: 18px 0 0;
+        padding: 0;
+        padding-left: 0;
+        color: #fff;
+        list-style: none;
+    }
+    .feature ul.list-clean li {
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, .16);
     }
 
 </style>

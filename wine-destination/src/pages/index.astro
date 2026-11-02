@@ -6,7 +6,7 @@ import Destination from "../components/destination.astro";
 import Wineries from "../components/wineries.astro";
 import Experience from "../components/experience_2.astro";
 import SeeMore from "../components/seeMore.astro";
-import Route from "../components/route.astro";
+// import Route from "../components/route.astro";
 import CheckList from "../components/checkList.astro";
 import Tips from "../components/tips.astro";
 import { site } from "../site";
@@ -17,7 +17,7 @@ const d = site.destination;
 const w = site.wineries;
 const e = site.experience;
 const s = site.seeMore;
-const r = site.route;
+// const r = site.route;
 const c = site.checkList;
 const t = site.ykTips;
 ---
@@ -29,7 +29,7 @@ const t = site.ykTips;
 	<Wineries h2={w.h2} content={w.content} wineries={w.wineries} />
 	<Experience h2={e.h2} features={e.feature} />
 	<SeeMore h2={s.h2} content={s.content} pills={s.pills} />
-	<Route h2={r.h2} content={r.content} days={r.days} />
+	<!-- <Route h2={r.h2} content={r.content} days={r.days} /> -->
 	<CheckList h2={c.h2} list={c.list} />
 	<Tips h2={t.h2} tips={t.tips} />
 </BaseLayout>

@@ -18,7 +18,7 @@ const {h2, tips} = Astro.props;
         </div>
         <div class="tips">
             {tips.map(({h3, content}) =>
-                <article class="tip">
+                <article class="tip card">
                     <h3>{h3}</h3>
                     <p>{content}</p>
                 </article>
