@@ -2,6 +2,7 @@
 interface List {
     h3: string;
     content: string;
+    pairing?: string; 
 }
 interface Props {
     h2: string;
@@ -17,11 +18,12 @@ const {h2, list} = Astro.props;
             <h2>{h2}</h2>
         </div>
         <div class="cards">
-            {list.map(({h3, content}) => 
+            {list.map(({h3, content, pairing}) => 
                 <article class="card">
                     <div class="card-body">
                         <h3>{h3}</h3>
                         <p>{content}</p>
+                        {pairing && <p class="wine-pick"><strong>Με τι συνδυάζεται :</strong> {pairing}</p>}
                     </div>
                 </article>
             )}
