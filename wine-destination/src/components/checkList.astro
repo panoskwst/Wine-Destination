@@ -23,10 +23,22 @@ const {h2, list} = Astro.props;
                     <div class="card-body">
                         <h3>{h3}</h3>
                         <p>{content}</p>
-                        {pairing && <p class="wine-pick"><strong>Με τι συνδυάζεται :</strong> {pairing}</p>}
+                        {pairing && <p class="wine-pairing"><strong>Με τι συνδυάζεται :</strong> {pairing}</p>}
                     </div>
                 </article>
             )}
         </div>
     </div>
 </section>
+
+<style>
+    .wine-pairing {
+        color: var(--ink);
+        margin-top: 17px;
+        font-size: 0.86rem;
+        border-left: 3px solid var(--rose);
+        background: var(--cream);
+        border-radius: 0px 12px 12px 0px;
+        padding: 15px;
+    }
+</style>
