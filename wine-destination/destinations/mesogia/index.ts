@@ -117,7 +117,7 @@ export default {
                 // cta: "Επίσημη ιστοσελίδα →"
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/gikas.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/koropi-winermaking-cooperative-2.webp",
                 alt: "Koropi Winemaking Cooperative",
                 kicker: "Κορωπί",
                 h3: "Koropi Winemaking Cooperative",
@@ -126,7 +126,7 @@ export default {
                 // cta: "Επίσημη ιστοσελίδα →"
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/gikas.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/markou-vineyards.webp",
                 alt: "Markou Vineyards",
                 kicker: "Παιανία",
                 h3: "Markou Vineyards",
@@ -144,7 +144,7 @@ export default {
                 // cta: "Επίσημη ιστοσελίδα →"
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/nikolaou.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/celar-papachristou.webp",
                 alt: "Papachristou Cellar",
                 kicker: "Σπάτα",
                 h3: "Papachristou Cellar",
@@ -163,15 +163,6 @@ export default {
             },
             {
                 image: "https://www.youweekly.gr/wp-content/uploads/2026/11/roxani-matsa-estate.webp",
-                alt: "Roxani Matsa Estate",
-                kicker: "Παιανία",
-                h3: "Roxani Matsa Estate",
-                content: "Ένα από τα πιο ιστορικά και αναγνωρισμένα οινοποιεία των Μεσογείων. Τα κρασιά του κτήματος έχουν αποσπάσει πολυάριθμες διακρίσεις σε διεθνείς διαγωνισμούς και έχουν παρουσιαστεί σε κορυφαία εστιατόρια και οινοχόους παγκοσμίως.",
-                // link: "https://www.roxanematsaestate.com/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/pyrgos-petrezas.webp",
                 alt: "Roxani Matsa Estate",
                 kicker: "Παιανία",
                 h3: "Roxani Matsa Estate",
