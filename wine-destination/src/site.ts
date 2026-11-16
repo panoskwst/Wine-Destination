@@ -1,6 +1,7 @@
+import drama from "../destinations/drama";
 import mesogia from "../destinations/mesogia";
 
-const all = {mesogia};
+const all = {mesogia, drama};
 const id  = import.meta.env.SITE_ID as keyof typeof all;
 if (!all[id]) throw new Error(`Set SITE_ID to one of: ${Object.keys(all).join(",")}`);
 

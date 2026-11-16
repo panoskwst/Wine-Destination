@@ -42,3 +42,173 @@ const {h2, list} = Astro.props;
         padding: 15px;
     }
 </style>
+<script type="module">
+import { parse, undefined } from "astro:schema";
+
+    const pad = (n) => String(n).padStart(2, "0");
+    const toISO = (year, monthIndex, day) => `${year}-${pad(monthIndex + 1)}-${pad(day)}`;
+
+    export function todayISO() {
+        const n = new Date();
+        return toISO(n.getFullYear(), n.getMonth(), n.getDate());
+    }
+
+    function parseISO(iso) {
+        const [y, m, d] = iso.split("-").map(Number);
+        return new Date(y, m -1, d);
+    }
+
+    export async function fetchEvents(apiBase, { signal, username, password } = {}) {
+        const url = new URL("events/v1/events", apiBase.replace(/\/?$/, "/"));
+        url.searchParams.set("per_page", "200");
+
+        const headers = {};
+
+        if (username && password) {
+            headers.Authorization = `Basic ${btoa(`${username}:${password}`)}`;
+        }
+
+        const res = await fetch(url, { signal, headers });
+        if (!res.ok) throw new Error(`Evenrts request failed: ${res.status}`);
+        return res.json();
+    }
+
+    export function groupByDate(events) {
+        const map = new Map();
+        for (const ev of events) {
+            if (!ev.date) continue;
+            if (!map.has(ev.date)) map.set(ev.date, []);
+            map.get(ev.date).push(ev);
+        }
+        return map;
+    }
+
+    export function getUpcoming(events, count = 3, today = todayISO()) {
+        return events
+            .filter((ev) => ev.date && ev.date >= today)
+            .sort((a, b) => a.date.localeCompare(b.date))
+            .slice(0, count);
+    }
+
+    function el(tag, className, text) {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined) node.textContent = text;
+
+        return node;
+    }
+
+    export function createCalendar(root, events, { locale = "en-GB", weekStartsOn = 1 } = {}) {
+        const byDate = groupByDate(events);
+        const today = todayISO();
+        const now = new Date();
+        let year = now.getFullYear();
+        let month = now.getMonth();
+
+        const monthFmt = new Intl.DateTimeFormat(locale, { month: "long", year: "numeric" });
+        const weekdayFmt = new Intl.DateTimeFormat(locale, { weekday: "short" });
+        const weekdays = Array.from({ length: 7}, (_,i) =>
+            weekdayFmt.format(new Date(2024, 0, 7 + ((weekStartsOn + i ) % 7)))
+        );
+
+        function render() {
+            root.replaceChildren();
+
+            const header = el("div", "cal-header");
+            const prev = el("button", "cal-nav", "‹");
+            const next = el("button", "cal-nav", "›");
+
+            prev.type = next.type = "button";
+            prev.setAttribute("aria-label", "Previous month");
+            next.setAttribute("aria-label", "Next month");
+            prev.addEventListener("click", () => shift(-1));
+            next.addEventListener("click", () => shift(1));
+            header.append(prev, el("div", "cal-title", monthFmt.format(new Date(year, month, 1))), next);
+
+            const grid = el("div", "cal-grid");
+            weekdays.forEach((w) => grid.append(el("div", "cal-weekday", w)));
+
+            const blanks = (new Date(year, month, 1).getDay() - weekStartsOn + 7) % 7;
+            for (let i = 0; i < blanks; i++) grid.append(el("div", "cal-day cal-empty"));
+
+            const daysInMonth = new Date(year, month +1, 0).getDate();
+            for (let d = 1; d<= daysInMonth; d++) {
+                const iso = toISO(year, month, d);
+                const dayEvents = byDate.get(iso);
+                const cell = el("div", "cal-day", String(d));
+
+                if (iso === today) cell.classList.add("cal-today");
+
+                if (dayEvents) {
+                    cell.classList.add("has-event");
+                    cell.tabIndex = 0;
+                    cell.setAttribute("aria-label", `${d}: ${dayEvents.map((e) => e.title).join(", ")}`);
+                    const tip = el("div", "cal-tip");
+                    dayEvents.forEach((e) => tip.append(el("div", "cal-tip-item", e.title)));
+                    cell.append(tip);
+                }
+                grid.append(cell);
+            }
+
+            root.append(header, grid);
+        }
+
+        function shift(delta) {
+            const d = new Date(year, month + delta, 1);
+            year = d.getFullYear();
+            month = d.getMonth();
+            render();
+        }
+
+        render();
+    }
+
+    export function renderUpcoming(root, events, { locale = "en-GB", count =3 } = {}) {
+        const upcoming = getUpcoming(events, count);
+        const dateFmt = new Intl.DateTimeFormat(locale, { day: "numeric", month: "long", year: "numeric" });
+        root.replaceChildren();
+
+        if (!upcoming.length) {
+            root.append(el("p", "up-empty", "No upcoming events."));
+            return;
+        }
+
+        const list = el("ul", "up-list");
+        for (const ev of upcoming) {
+            const li = el("li", "up-item");
+            li.append(el("time", "up-date", dateFmt.format(parseISO(ev.date))));
+            li.lastChild.dateTime = ev.date;
+            li.append(el("h3", "up-title", ev.title));
+            if (ev.location) li.append(el("div", "up-location", ev.location));
+            if (ev.description) li.append(el("p", "up-desc", ev.description));
+            list.append(li);
+        }
+        root.append(list);
+    }
+
+    export async function initEvents({ apiBase, calendar, upcoming, locale = "en-GB", upcomingCount = 3 }) {
+        try {
+            const events = await fetchEvents(apiBase, {username: "youweekly", password: "3aJgaJE1471-J5mwrRN-aaW", });
+            if (calendar) createCalendar(calendar, events, { locale });
+            if (upcoming) renderUpcoming(upcoming, events, { locale, count: upcomingCount });
+            return events;
+        } catch (err) {
+            console.error(err);
+            for (const root of [calendar, upcoming]) {
+                if (root) root.replaceChildren(el("p", "events-error", "Events could not be loaded."));
+            }
+            return [];
+        }
+    }
+
+    initEvents({
+      apiBase: "https://stage.youweekly.gr/wp-json", // <-- your WordPress site
+      calendar: document.getElementById("calendar"),
+      upcoming: document.getElementById("upcoming"),
+      locale: "en-GB",        // e.g. "el-GR" for Greek month and weekday names
+      upcomingCount: 3,
+    });
+</script>
+
+<section><div id="calendar"></div></section>
+<section><h2>Upcoming events</h2><div id="upcoming"></div></section>
