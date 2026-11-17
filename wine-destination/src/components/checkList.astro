@@ -58,17 +58,17 @@ import { parse, undefined } from "astro:schema";
         return new Date(y, m -1, d);
     }
 
-    export async function fetchEvents(apiBase, { signal, username, password } = {}) {
+    export async function fetchEvents(apiBase, { signal } = {}) {
         const url = new URL("events/v1/events", apiBase.replace(/\/?$/, "/"));
         url.searchParams.set("per_page", "200");
 
-        const headers = {};
+        // const headers = {};
 
-        if (username && password) {
-            headers.Authorization = `Basic ${btoa(`${username}:${password}`)}`;
-        }
+        // if (username && password) {
+        //     headers.Authorization = `Basic ${btoa(`${username}:${password}`)}`;
+        // }
 
-        const res = await fetch(url, { signal, headers });
+        const res = await fetch(url, { signal });
         if (!res.ok) throw new Error(`Evenrts request failed: ${res.status}`);
         return res.json();
     }
@@ -202,7 +202,7 @@ import { parse, undefined } from "astro:schema";
     }
 
     initEvents({
-      apiBase: "https://stage.youweekly.gr/wp-json", // <-- your WordPress site
+      apiBase: "https://www.youweekly.gr/wp-json", // <-- your WordPress site
       calendar: document.getElementById("calendar"),
       upcoming: document.getElementById("upcoming"),
       locale: "en-GB",        // e.g. "el-GR" for Greek month and weekday names

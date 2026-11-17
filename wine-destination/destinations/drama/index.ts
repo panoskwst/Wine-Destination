@@ -23,6 +23,7 @@ export default {
         state: "Δράμα",
         h1: "Ο Δρόμος του Κρασιού της <em>Δράμας</em>",
         lead: "Η Δράμα μάς ταξιδεύει στον σύγχρονο ελληνικό αμπελώνα, συνδυάζοντας κρασί, γαστρονομία, τέχνη και φύση.",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kentriki-Drama-2.webp",
     },
     facts: [
         {
@@ -43,7 +44,7 @@ export default {
         },
     ],
     destination: {
-        image: "https://www.youweekly.gr/wp-content/uploads/2026/10/abeliattica-small.webp",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/proorismos-Drama-2.webp",
         alt: "Αμπελώνας στα Μεσόγεια Αττικής",
         h2: "Ο αμπελώνας της περιοχής και τα μυστικά του terroir",
         content: "Οι αμπελώνες της Δράμας απλώνονται στις πλαγιές του Φαλακρού και του Μενοικίου, σε υψόμετρα 100–450 μέτρων. Το δροσερό κλίμα και οι ιδιαίτερες εδαφικές συνθήκες ευνοούν ελληνικές και διεθνείς ποικιλίες, αναδεικνύοντας την περιοχή σε έναν από τους σημαντικότερους οινικούς προορισμούς της Ελλάδας, με σύγχρονα οινοποιεία και διεθνείς διακρίσεις.",
@@ -186,13 +187,13 @@ export default {
         h2: "Η εμπειρία πέρα από το ποτήρι",
         feature: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/meat-576x470-1.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/eat-Drama.webp",
                 eyebrow: "Wine & Dine",
                 h3: "Γευστικές στάσεις",
                 content: "Στη Δράμα, ο Μάγειρας, το S'eu Restaurant στο Hydrama Grand Hotel, το Διώνη στο Hotel Kouros, το La Griglia da Routsis, το Fileto Meat Restaurant και το Rodostamo αποτελούν επιλογές για να συνδυάσετε την οινική διαδρομή με καλό φαγητό." 
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/riviera576x470.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/stay-Drama.webp",
                 eyebrow: "Stay & Wine",
                 h3: "Διαμονή στα Μεσόγεια",
                 list: [

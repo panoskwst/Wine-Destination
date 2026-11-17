@@ -3,13 +3,14 @@ interface Props {
     state: string;
     h1: string;
     lead: string;
+    image: string;
 }
 
-const {state, h1, lead} = Astro.props;
+const {state, h1, lead, image} = Astro.props;
 const h1Parts = h1.split(/(<em>.*?<\/em>)/g);
 ---
 
-<section class="hero">
+<section class="hero" style={`--hero-image: url("${image}")`}>
     <div class="container hero-content">
         <p class="eyebrow">
             <a href="https://www.youweekly.gr/?page_id=797428">Δρόμοι του κρασιού</a> • {state}
@@ -30,7 +31,7 @@ const h1Parts = h1.split(/(<em>.*?<\/em>)/g);
         color: #fff;
         background:
             linear-gradient(90deg, rgba(28, 4, 10, 0.9), rgba(28, 4, 10, 0.42) 58%, rgba(28, 4, 10, 0.16)),
-            url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2000&q=88")
+            var(--hero-image)
                 center/cover;
     }
     .hero-content {
