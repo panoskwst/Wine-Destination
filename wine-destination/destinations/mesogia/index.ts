@@ -1,7 +1,7 @@
 export default {
     id: "fl",
-    title: "Ο Δρόμος του Κρασιού της Φλώρινας",
-    desc: "Ο Δρόμος του Κρασιού της Φλώρινας: οινοποιεία Αμυνταίου, Ξινόμαυρο, λίμνες, Νυμφαίο, Πρέσπες, γαστρονομία και ολοκληρωμένη διήμερη διαδρομή.",
+    title: "Στα μονοπάτια του κρασιού",
+    desc: "Τα Μεσόγεια Αττικής αποκαλύπτουν μια λιγότερο γνωστή πλευρά της πρωτεύουσας, άρρηκτα συνδεδεμένη με την ιστορία του ελληνικού κρασιού",
     url: "",
     color: "#711c2f",
     theme: {wine: "#711c2f", dark: "#3f0d1a", rose: "#a8465b", cream: "#f7f1e8", ink: "#201d1e", muted: "#746d70", line: "rgba(32, 29, 30, 0.13);", shadow: "0 18px 50px rgba(46, 17, 24, 0.12);", radius: "22px", max: "1180px"},
@@ -23,6 +23,7 @@ export default {
         state: "Μεσόγεια",
         h1: "Στα μονοπάτια <em>του κρασιού</em>",
         lead: "Τα Μεσόγεια Αττικής αποκαλύπτουν μια λιγότερο γνωστή πλευρά της πρωτεύουσας, άρρηκτα συνδεδεμένη με την ιστορία του ελληνικού κρασιού",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/photo-1506377247377-2a5b3b417ebb.avif",
     },
     facts: [
         {
@@ -52,6 +53,7 @@ export default {
     wineries: {
         h2: "Ανακάλυψε τα Οινοποιεία των Μεσογείων",
         content: "Για την επίσκεψη σου απαιτείτε προηγούμενη επικοινωνία, καθώς τα ωράρια, τα προγράμματα και το κόστος γευσιγνωσίας ενδέχεται να αλλάζουν.",
+        dest: "Μεσόγεια",
         wineries: [
             {
                 image: "https://www.youweekly.gr/wp-content/uploads/2026/11/papagiannakos.webp",
@@ -59,126 +61,49 @@ export default {
                 kicker: "Μεσόγεια • Συνεταιριστική ιστορία",
                 h3: "Οινοποιείο Παπαγιαννάκος",
                 content: "Το Οινοποιείο Παπαγιαννάκος, στα Μεσόγεια Αττικής προσφέρει γευσιγνωσίες, wine tasting, περιηγήσεις στον αμπελώνα, Savatiano Masterclass και μοναδικές εμπειρίες οινοτουρισμού μόλις λίγα λεπτά από την Αθήνα.",
-                link: "https://papagiannakos.gr/",
-                cta: "Επίσημη ιστοσελίδα →"
+                link: "https://www.youweekly.gr/article/entertainment/travel/oinopoieio-papagiannakos-to-proto-vioklimatiko-oinopoieio-tis-elladas-molis-30-lepta-apo-tin-athina",
+                cta: "Δες Εδώ →"
+            },
+        ],
+        seeAlso: [
+            {
+                name: "Οινοποιία Αλλαγιάννη",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
-                alt: "Οινοποιία Αλλαγιάννη",
-                kicker: "Μεσόγεια • Μαρκόπουλο",
-                h3: "Οινοποιία Αλλαγιάννη",
-                content: "Με πάνω από 25 χρόνια δραστηριοποίησης στον χώρο του κρασιού, συνδυάζοντας την παράδοση της αττικής γης με σύγχρονες μεθόδους οινοποίησης. Δίνει έμφαση στην παραγωγή κρασιών περιορισμένης ποσότητας και υψηλής ποιότητας.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Anagnostou Winery",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
-                alt: "Anagnostou Winery",
-                kicker: "Μεσόγεια",
-                h3: "Anagnostou Winery",
-                content: "Mε πολυετή οικογενειακή παράδοση στον χώρο του αμπελιού και του κρασιού. Δημιουργήθηκε από τον οινολόγο Χρήστο Αναγνώστου, ο οποίος πάντρεψε την παραδοσιακή γνώση και κληρονομιά με τις σύγχρονες τεχνικές οινοποίησης και τον εξοπλισμό.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Aoton Winery",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/aoton_logο.webp",
-                alt: "Aoton Winery",
-                kicker: "Παιανία",
-                h3: "Aoton Winery",
-                content: "Η ονομασία του («Άωτον») προέρχεται από την αρχαία ελληνική λέξη που χαρακτηρίζει το καλύτερο, το εκλεκτότερο δείγμα ενός είδους. Η οικογενειακή παράδοση στην αμπελοκαλλιέργεια και την παραγωγή οίνου μετράει πέντε γενιές πίσω στην περιοχή, ξεκινώντας από το παλιό παραδοσιακό «πατητήρι».",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Evinos Estate",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/evinos.webp",
-                alt: "Evinos Estate",
-                kicker: "Σπάτα",
-                h3: "Evinos Estate",
-                content: "Η ονομασία του («Άωτον») προέρχεται από την αρχαία ελληνική λέξη που χαρακτηρίζει το καλύτερο, το εκλεκτότερο δείγμα ενός είδους. Η οικογενειακή παράδοση στην αμπελοκαλλιέργεια και την παραγωγή οίνου μετράει πέντε γενιές πίσω στην περιοχή, ξεκινώντας από το παλιό παραδοσιακό «πατητήρι».",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Georgas Family",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/evinos.webp",
-                alt: "Georgas Family",
-                kicker: "Σπάτα",
-                h3: "Georgas Family",
-                content: "Σε πλήρη αρμονία με τη φύση, εφαρμόζοντας αυστηρά βιοδυναμικές και οργανικές μεθόδους χωρίς χημικές παρεμβάσεις το οινοποιείο επικεντρώνεται σε τοπικές ποικιλίες της Αττικής.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Gikas Winery",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/gikas.webp",
-                alt: "Gikas Winery",
-                kicker: "Σπάτα",
-                h3: "Gikas Winery",
-                content: "Ένας πετρόκτιστος χώρος με σύγχρονο τεχνολογικό εξοπλισμό και ειδικά διαμορφωμένες αίθουσες γευσιγνωσίας, Παράγει μια ευρεία γκάμα κρασιών Προστατευόμενης Γεωγραφικής Ένδειξης (ΠΓΕ) καλλιεργώντας δημοφιλές ετικέτες όπως το Pine Forest και Esperia",
-                // link: "https://www.gikaswinery.gr/en/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Koropi Winemaking Cooperative",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/koropi-winermaking-cooperative-2.webp",
-                alt: "Koropi Winemaking Cooperative",
-                kicker: "Κορωπί",
-                h3: "Koropi Winemaking Cooperative",
-                content: "Η συλλογική οινοποιητική δραστηριότητα στην περιοχή ξεκίνησε το 1934. Στη σημερινή του μορφή ο συνεταιρισμός αναδιαμορφώθηκε το 1986 μετά τη συνένωση τριών τοπικών συνεταιρισμών. Αποτελείται από εκατοντάδες τοπικές αμπελουργικές οικογένειες των Μεσογείων.",
-                // link: "https://hellenicwinery.gr/index.php",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Markou Vineyards",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/markou-vineyards.webp",
-                alt: "Markou Vineyards",
-                kicker: "Παιανία",
-                h3: "Markou Vineyards",
-                content: "Ένα από τα πιο χαρακτηριστικά γνωριστήρια του κτήματος είναι το ιδιόκτητο Μουσείο Οίνου, το οποίο στεγάζεται σε παραδοσιακά κτίρια της οικογένειας. Στους χώρους του εκτίθενται σπάνια αντικείμενα, παλιό παραδοσιακό εξοπλισμός αμπελουργίας και οινοποίησης (όπως παλιά πατητήρια, βαρέλια και εργαλεία), αναδεικνύοντας την ιστορία του αττικού αμπελώνα και της παραδοσιακής ρετσίνας.",
-                // link: "https://hellenicwinery.gr/index.php",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Nikolou Winery",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/nikolaou.webp",
-                alt: "Nikolou Winery",
-                kicker: "Κορωπί",
-                h3: "Nikolou Winery",
-                content: "Η οικογένεια Νικολάου ασχολείται με το αμπέλι και το κρασί για πολλές γενιές, ενώ στους χώρους του οινοποιείου λειτουργεί αξιόλογο λαογραφικό και οινοποιητικό μουσείο, το οποίο εκθέτει σπάνια αντικείμενα και εργαλεία από την αγροτική και οινοποιητική ζωή των Μεσογείων.",
-                // link: "https://ampelonesmarkougroup.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Papachristou Cellar",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/celar-papachristou.webp",
-                alt: "Papachristou Cellar",
-                kicker: "Σπάτα",
-                h3: "Papachristou Cellar",
-                content: "Με ιδιαίτερη έμφαση στην ποιότητα, την επιλογή προσεγμένων αμπελουργικών προϊόντων και τη στήριξη του ελληνικού αμπελώνα, το Papachristou Cellar παρέχει εξειδικευμένες γνώσεις γύρω από το κρασί, προτάσεις γευσιγνωσίας και καθοδήγηση για τη σωστή επιλογή συνοδευτικών ή δώρων",
-                // link: "https://ampelonesmarkougroup.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Petreza Tower",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/pyrgos-petrezas.webp",
-                alt: "Petreza Tower",
-                kicker: "Σπάτα",
-                h3: "Petreza Tower",
-                content: "Ένας εντυπωσιακός, ιστορικός χώρος εκδηλώσεων και οινοποιείο. Το κτίριο είναι εμπνευσμένο από μεσαιωνικούς πύργους της Ευρώπης, χτισμένο εξ ολοκλήρου με πέτρα και παραδοσιακά υλικά, δημιουργώντας μια μοναδική ατμόσφαιρα παραμυθιού.",
-                // link: "https://pyrgospetreza.gr/el/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Roxani Matsa Estate",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/roxani-matsa-estate.webp",
-                alt: "Roxani Matsa Estate",
-                kicker: "Παιανία",
-                h3: "Roxani Matsa Estate",
-                content: "Ένα από τα πιο ιστορικά και αναγνωρισμένα οινοποιεία των Μεσογείων. Τα κρασιά του κτήματος έχουν αποσπάσει πολυάριθμες διακρίσεις σε διεθνείς διαγωνισμούς και έχουν παρουσιαστεί σε κορυφαία εστιατόρια και οινοχόους παγκοσμίως.",
-                // link: "https://www.roxanematsaestate.com/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/10/winery-910x512-small.webp",
-                alt: "Αμπελώνας και σταφύλια",
-                kicker: "Κορωπί • Μεσόγεια",
-                h3: "Vassiliou Winery",
-                content: "Ένας από τους βασικούς πυλώνες της αμπελουργικής ζώνης, με βαθιά σύνδεση με τους παραγωγούς και σημαντική παράδοση στα ερυθρά, ροζέ και αφρώδη κρασιά από Ξινόμαυρο.",
-                tasting: "Notes of citrus, green apple, mineral nuances, and spice",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Vassiliou Winery",
             },
         ],
     },

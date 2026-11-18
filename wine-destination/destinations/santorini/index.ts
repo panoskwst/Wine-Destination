@@ -23,6 +23,7 @@ export default {
         state: "Σαντορίνη",
         h1: "Οινική εξερεύνηση στη <em>Σαντορίνη</em>",
         lead: "Η Σαντορίνη μάς ταξιδεύει στην πατρίδα του Ασύρτικου, εκεί όπου ο ηφαιστειακός αμπελώνας συναντά τη μοναδική θέα της Καλντέρας, την ιστορία και τη γαστρονομία.",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kentiki-santorini-2.webp",
     },
     facts: [
         {
@@ -43,7 +44,7 @@ export default {
         },
     ],
     destination: {
-        image: "https://www.youweekly.gr/wp-content/uploads/2026/10/abeliattica-small.webp",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/proorismos-santorini.webp",
         alt: "Αμπελώνας της Σαντορίνης",
         h2: "Ο αμπελώνας της περιοχής και τα μυστικά του terroir",
         content: "Ο αμπελώνας της Σαντορίνης καλλιεργείται εδώ και περισσότερα από 3.500 χρόνια πάνω σε ηφαιστειακά εδάφη, με στάχτη, ελαφρόπετρα και λάβα. Το ξηρό κλίμα, οι δυνατοί άνεμοι και η έντονη ηλιοφάνεια διαμορφώνουν ένα μοναδικό terroir. Η παραδοσιακή τεχνική της «κουλούρας» προστατεύει τα σταφύλια, ενώ τα αυτόρριζα κλήματα, πολλά ηλικίας άνω των 150 ετών, αποτελούν σημαντικό στοιχείο της οινικής κληρονομιάς του νησιού.",
@@ -52,47 +53,38 @@ export default {
     wineries: {
         h2: "Ανακάλυψε τα Οινοποιεία της Σαντορίνης",
         content: "Για την επίσκεψή σου απαιτείται προηγούμενη επικοινωνία, καθώς τα προγράμματα και το κόστος γευσιγνωσίας ενδέχεται να αλλάζουν.",
+        dest: "Σαντορίνη",
         wineries: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/gaia.webp",
                 alt: "Gaia Wines",
                 kicker: "Σαντορίνη",
                 h3: "Gaia Wines",
                 content: "Ένα πρωτοποριακό οινοποιείο που αναδεικνύει τον πλούτο του ελληνικού αμπελώνα μέσα από ξεχωριστές ετικέτες.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/aoton_logο.webp",
-                alt: "Tzivani Bio Wines",
-                kicker: "Ριτσώνα Αυλίδας",
-                h3: "Tzivani Bio Wines",
-                content: "Βιολογική οινοποιία στην ευρύτερη περιοχή της Χαλκίδας.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/evinos.webp",
-                alt: "Κτήμα Πετρήεσσα",
-                kicker: "Βαθύ Αυλίδας",
-                h3: "Κτήμα Πετρήεσσα",
-                content: "Μια ακόμη οινοποιητική στάση στην ευρύτερη οινική διαδρομή της περιοχής.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                link: "https://www.youweekly.gr/article/entertainment/travel/gaia-wines-i-ellada-tou-krasiou-apo-tis-plagies-tis-nemeas-mechri-tin-ifaistieaki-santorini",
+                cta: "Δες Εδώ →"
             },
         ],
+        seeAlso: [
+            {
+                name: "Tzivani Bio Wines",
+            },
+            {
+                name: "Κτήμα Πετρήεσσα",
+            },
+        ]
     },
     experience: {
         h2: "Η εμπειρία πέρα από το ποτήρι",
         feature: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/meat-576x470-1.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/eat-santorini.webp",
                 eyebrow: "Wine & Dine",
                 h3: "Γευστικές στάσεις",
                 content: "Στη Σαντορίνη, το Selene στον Πύργο και το Botrini's Santorini αποτελούν ξεχωριστές γαστρονομικές προτάσεις, ενώ το Metaxi Mas προσφέρει αυθεντικές γεύσεις. Το Aroma Avlis, στο Κτήμα Αρτέμη Καραμολέγκου, συνδυάζει φαγητό και κρασί, ενώ το Lycabettus Restaurant, το Lauda Restaurant και το Santo Wines Restaurant συμπληρώνουν τις οινογαστρονομικές επιλογές του νησιού." 
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/riviera576x470.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/stay-santorini.webp",
                 eyebrow: "Stay & Wine",
                 h3: "Διαμονή στη Σαντορίνη",
                 list: [

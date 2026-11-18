@@ -9,12 +9,17 @@ interface Wineries {
     link: string;
     cta: string;
 }
+interface SeeAlso {
+    name: string;
+}
 interface Props {
     h2: string;
     content: string;
+    dest: string;
     wineries: Wineries[];
+    seeAlso: SeeAlso[];
 }
-const {h2, content, wineries} = Astro.props;
+const {h2, content, dest, wineries, seeAlso} = Astro.props;
 ---
 
 <section class="section-soft" id="wineries">
@@ -37,6 +42,17 @@ const {h2, content, wineries} = Astro.props;
                     </div>
                 </article>
             )}
+            <article class="card">
+                <div class="card-body">
+                    <div class="card-kicker">{dest}</div>
+                    <h3>Επίσης στην περιοχή</h3>
+                    <ul>
+                        {seeAlso.map(({ name }) =>
+                            <li class="winery-list">{name}</li>
+                        )}
+                    </ul>
+                </div>
+            </article>
         </div>
     </div>
 </section>
@@ -60,5 +76,12 @@ const {h2, content, wineries} = Astro.props;
         background: var(--cream);
         color: var(--ink);
         font-size: .86rem;
+    }
+    .winery-list {
+        list-style: none;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        border-bottom: 3px solid var(--cream);
+        color: var(--ink);
     }
 </style>

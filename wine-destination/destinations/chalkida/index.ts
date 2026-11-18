@@ -23,7 +23,7 @@ export default {
         state: "Χαλκίδα",
         h1: "Η Χαλκίδα αποκαλύπτει τους οινικούς θησαυρούς του <em>Ληλάντιου Πεδίου</em>",
         lead: "Η Χαλκίδα μάς προσκαλεί σε μια ξεχωριστή οινική απόδραση, εκεί όπου οι αμπελώνες του Ληλάντιου Πεδίου συναντούν τη θάλασσα, τη γαστρονομία και την ιστορία.",
-        Image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kentriki-evoia.webp",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kentriki-evoia.webp",
     },
     facts: [
         {
@@ -53,53 +53,32 @@ export default {
     wineries: {
         h2: "Ανακάλυψε τα Οινοποιεία της Χαλκίδας",
         content: "Για την επίσκεψή σου απαιτείται προηγούμενη επικοινωνία, καθώς τα προγράμματα και το κόστος γευσιγνωσίας ενδέχεται να αλλάζουν.",
+        dest: "Χαλκίδα",
         wineries: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/papagiannakos.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/Avantis.webp",
                 alt: "Κτήμα Αβαντίς",
                 kicker: "Μύτικας",
                 h3: "Κτήμα Αβαντίς",
                 content: "Ένα από τα σημαντικότερα οινοποιεία της Εύβοιας, με διεθνείς διακρίσεις, οργανωμένες γευσιγνωσίες και έμφαση στη Μαυροκουντούρα και το Syrah.",
-                link: "https://papagiannakos.gr/",
-                cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
-                alt: "Lykos Winery",
-                kicker: "Μαλακώντας",
-                h3: "Lykos Winery",
-                content: "Οικογενειακό οινοποιείο με ξεναγήσεις, γευσιγνωσίες και δυνατότητα συνδυασμού κρασιού και γαστρονομίας στο ομώνυμο εστιατόριο.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
-                alt: "Οινοποιείο Σκουμπρή",
-                kicker: "Άγιος Νικόλαος Ληλαντίου",
-                h3: "Anagnostou Winery",
-                content: "Οικογενειακό οινοποιείο με περιορισμένες παραγωγές και χώρο γευσιγνωσίας δίπλα στον αμπελώνα.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/aoton_logο.webp",
-                alt: "Tzivani Bio Wines",
-                kicker: "Ριτσώνα Αυλίδας",
-                h3: "Tzivani Bio Wines",
-                content: "Βιολογική οινοποιία στην ευρύτερη περιοχή της Χαλκίδας.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/evinos.webp",
-                alt: "Κτήμα Πετρήεσσα",
-                kicker: "Βαθύ Αυλίδας",
-                h3: "Κτήμα Πετρήεσσα",
-                content: "Μια ακόμη οινοποιητική στάση στην ευρύτερη οινική διαδρομή της περιοχής.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                link: "https://www.youweekly.gr/article/entertainment/travel/ktima-avantis-i-oiniki-taftotita-tis-evvoias-mesa-apo-mia-paradosi-pou-perna-apo-genia-se-genia-gemati-pathos-kai-dimiourgia",
+                cta: "Δες Εδώ →"
             },
         ],
+        seeAlso: [
+            {
+                name: "Lykos Winery",
+            },
+            {
+                name: "Anagnostou Winery",
+            },
+            {
+                name: "Tzivani Bio Wines",
+            },
+            {
+                name: "Κτήμα Πετρήεσσα",
+            },
+        ]
     },
     experience: {
         h2: "Η εμπειρία πέρα από το ποτήρι",

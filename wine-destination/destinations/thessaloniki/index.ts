@@ -23,6 +23,7 @@ export default {
         state: "Θεσσαλονίκη",
         h1: "Από τους αμπελώνες της Επανομής στα πιο ξεχωριστά wine spots της <em>Θεσσαλονίκης</em>",
         lead: "Από τους αμπελώνες της Επανομής μέχρι τα σύγχρονα wine bars του κέντρου, η Θεσσαλονίκη συνδυάζει το καλό κρασί με τη γαστρονομία, την ιστορία και την κοσμοπολίτικη ατμόσφαιρα.",
+        image: "",
     },
     facts: [
         {
@@ -52,35 +53,50 @@ export default {
     wineries: {
         h2: "Ανακάλυψε τα Οινοποιεία της Θεσσαλονίκης",
         content: "Για την επίσκεψή σου απαιτείται προηγούμενη επικοινωνία, καθώς τα προγράμματα και το κόστος γευσιγνωσίας ενδέχεται να αλλάζουν.",
+        dest: "Θεσσαλονίκη",
         wineries: [
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
-                alt: "Gaia Wines",
-                kicker: "Σαντορίνη",
-                h3: "Gaia Wines",
-                content: "Ένα πρωτοποριακό οινοποιείο που αναδεικνύει τον πλούτο του ελληνικού αμπελώνα μέσα από ξεχωριστές ετικέτες.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/aoton_logο.webp",
-                alt: "Tzivani Bio Wines",
-                kicker: "Ριτσώνα Αυλίδας",
-                h3: "Tzivani Bio Wines",
-                content: "Βιολογική οινοποιία στην ευρύτερη περιοχή της Χαλκίδας.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/evinos.webp",
-                alt: "Κτήμα Πετρήεσσα",
-                kicker: "Βαθύ Αυλίδας",
-                h3: "Κτήμα Πετρήεσσα",
-                content: "Μια ακόμη οινοποιητική στάση στην ευρύτερη οινική διαδρομή της περιοχής.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
+            // {
+            //     image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
+            //     alt: "Gaia Wines",
+            //     kicker: "Σαντορίνη",
+            //     h3: "Gaia Wines",
+            //     content: "Ένα πρωτοποριακό οινοποιείο που αναδεικνύει τον πλούτο του ελληνικού αμπελώνα μέσα από ξεχωριστές ετικέτες.",
+            //     link: "https://amyntaswines.gr/",
+            //     cta: "Επίσημη ιστοσελίδα →"
+            // },
+            // {
+            //     image: "https://www.youweekly.gr/wp-content/uploads/2026/11/aoton_logο.webp",
+            //     alt: "Tzivani Bio Wines",
+            //     kicker: "Ριτσώνα Αυλίδας",
+            //     h3: "Tzivani Bio Wines",
+            //     content: "Βιολογική οινοποιία στην ευρύτερη περιοχή της Χαλκίδας.",
+            //     link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
+            //     cta: "Επίσημη ιστοσελίδα →"
+            // },
+            // {
+            //     image: "https://www.youweekly.gr/wp-content/uploads/2026/11/evinos.webp",
+            //     alt: "Κτήμα Πετρήεσσα",
+            //     kicker: "Βαθύ Αυλίδας",
+            //     h3: "Κτήμα Πετρήεσσα",
+            //     content: "Μια ακόμη οινοποιητική στάση στην ευρύτερη οινική διαδρομή της περιοχής.",
+            //     link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
+            //     cta: "Επίσημη ιστοσελίδα →"
+            // },
         ],
+        seeAlso: [
+            {
+                name: "Κτήμα Γεροβασιλείου – Επανομή",
+            },
+            {
+                name: "Οινοποιείο Κεχρής – Καλοχώρι",
+            },
+            {
+                name: "Domaine Florian – Τρίλοφος",
+            },
+            {
+                name: "Κτήμα Μπαμπατζιμόπουλου – Όσσα Λαγκαδά",
+            }
+        ]
     },
     experience: {
         h2: "Η εμπειρία πέρα από το ποτήρι",

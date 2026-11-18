@@ -23,7 +23,7 @@ export default {
         state: "Ρόδος",
         h1: "Ρόδος: Από τη Μεσαιωνική Πόλη στους αμπελώνες του <em>Αττάβυρου</em>",
         lead: "Η Ρόδος αποκαλύπτει την οινική της παράδοση, εκεί όπου οι αμπελώνες του Αττάβυρου συναντούν την ιστορία, τη θάλασσα και την αυθεντική γαστρονομία.",
-        Image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kentriki-Rhodos-3.webp",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kentriki-Rhodos-3.webp",
     },
     facts: [
         {
@@ -53,51 +53,30 @@ export default {
     wineries: {
         h2: "Ανακάλυψε τα Οινοποιεία της Ρόδου",
         content: "Για την επίσκεψή σου απαιτείται προηγούμενη επικοινωνία, καθώς τα προγράμματα και το κόστος γευσιγνωσίας ενδέχεται να αλλάζουν.",
+        dest: "Ρόδος",
         wineries: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/papagiannakos.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kounaki-wines.webp",
                 alt: "Kounaki Wines",
                 kicker: "Ρόδος",
                 h3: "Kounaki Wines",
                 content: "Οινοποιείο που αναδεικνύει τον χαρακτήρα του ροδίτικου αμπελώνα.",
-                link: "https://papagiannakos.gr/",
-                cta: "Επίσημη ιστοσελίδα →"
+                link: "https://www.youweekly.gr/article/entertainment/travel/kounaki-wines-i-oiniki-kardia-tis-rodou-chtypa-ston-ebona",
+                cta: "Δες Εδώ →"
+            },
+        ],
+        seeAlso: [
+            {
+                name: "Semeli Estate",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
-                alt: "Semeli Estate",
-                kicker: "Νεμέα",
-                h3: "Semeli Estate",
-                content: "Σύγχρονο οινοποιείο με εγκαταστάσεις και εμπειρίες μέσα στους αμπελώνες.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Gaia Wines",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
-                alt: "Gaia Wines",
-                kicker: "Νεμέα",
-                h3: "Gaia Wines",
-                content: "Ένα πρωτοποριακό οινοποιείο που αναδεικνύει τον πλούτο του ελληνικού αμπελώνα μέσα από ξεχωριστές ετικέτες.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Tzivani Bio Wines",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/aoton_logο.webp",
-                alt: "Tzivani Bio Wines",
-                kicker: "Ριτσώνα Αυλίδας",
-                h3: "Tzivani Bio Wines",
-                content: "Βιολογική οινοποιία στην ευρύτερη περιοχή της Χαλκίδας.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/evinos.webp",
-                alt: "Κτήμα Πετρήεσσα",
-                kicker: "Βαθύ Αυλίδας",
-                h3: "Κτήμα Πετρήεσσα",
-                content: "Μια ακόμη οινοποιητική στάση στην ευρύτερη οινική διαδρομή της περιοχής.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Κτήμα Πετρήεσσα",
             },
         ],
     },

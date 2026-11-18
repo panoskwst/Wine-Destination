@@ -53,51 +53,33 @@ export default {
     wineries: {
         h2: "Ανακάλυψε τα Οινοποιεία της Καρδίτσας",
         content: "Για την επίσκεψή σου απαιτείται προηγούμενη επικοινωνία, καθώς τα προγράμματα και το κόστος γευσιγνωσίας ενδέχεται να αλλάζουν.",
+        dest: "Καρδίτσα",
         wineries: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/papagiannakos.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/Winery-Monsieur-Nicolas.webp",
                 alt: "Winery Monsieur Nicolas by G. Karamitros",
                 kicker: "Μεσενικόλας",
                 h3: "Winery Monsieur Nicolas by G. Karamitros",
                 content: "Οικογενειακή παράδοση τεσσάρων γενεών, γευσιγνωσίες, wine pairing και ανάδειξη της σπάνιας ποικιλίας Μαύρο Μεσενικόλα.",
-                link: "https://papagiannakos.gr/",
-                cta: "Επίσημη ιστοσελίδα →"
+                link: "https://www.youweekly.gr/article/entertainment/travel/winery-monsieur-nicolas-ena-oiniko-taxidi-stin-kardia-tou-mesenikola",
+                cta: "Δες Εδώ →"
+            },
+        ],
+        seeAlso: [
+            {
+                name: "Filia gi Φίλια -Σοφάδες Καρδίτσας",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
-                alt: "Lykos Winery",
-                kicker: "Μαλακώντας",
-                h3: "Lykos Winery",
-                content: "Οικογενειακό οινοποιείο με ξεναγήσεις, γευσιγνωσίες και δυνατότητα συνδυασμού κρασιού και γαστρονομίας στο ομώνυμο εστιατόριο.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Puro Karathanos organic Παλιούρι - Πρόποδες Αγράφων",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
-                alt: "Οινοποιείο Σκουμπρή",
-                kicker: "Άγιος Νικόλαος Ληλαντίου",
-                h3: "Anagnostou Winery",
-                content: "Οικογενειακό οινοποιείο με περιορισμένες παραγωγές και χώρο γευσιγνωσίας δίπλα στον αμπελώνα.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Kontozisis Κανάλια - Περιοχή Μουζακίου",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/aoton_logο.webp",
-                alt: "Tzivani Bio Wines",
-                kicker: "Ριτσώνα Αυλίδας",
-                h3: "Tzivani Bio Wines",
-                content: "Βιολογική οινοποιία στην ευρύτερη περιοχή της Χαλκίδας.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Liappas _ Μουζάκι Καρδίτσας",
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/evinos.webp",
-                alt: "Κτήμα Πετρήεσσα",
-                kicker: "Βαθύ Αυλίδας",
-                h3: "Κτήμα Πετρήεσσα",
-                content: "Μια ακόμη οινοποιητική στάση στην ευρύτερη οινική διαδρομή της περιοχής.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                name: "Μενελαΐς",
             },
         ],
     },

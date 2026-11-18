@@ -53,53 +53,44 @@ export default {
     wineries: {
         h2: "Ανακάλυψε τα Οινοποιεία της Νεμέας",
         content: "Για την επίσκεψή σου απαιτείται προηγούμενη επικοινωνία, καθώς τα προγράμματα και το κόστος γευσιγνωσίας ενδέχεται να αλλάζουν.",
+        dest: "Νεμέα",
         wineries: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/papagiannakos.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/barafakas.webp",
                 alt: "Barafakas Winery",
                 kicker: "Αγιωργίτικο",
                 h3: "Barafakas Winery",
                 content: "Οινοποιείο που αναδεικνύει τις διαφορετικές εκφράσεις του Αγιωργίτικου.",
-                link: "https://papagiannakos.gr/",
-                cta: "Επίσημη ιστοσελίδα →"
+                link: "https://www.youweekly.gr/article/entertainment/travel/kera-neme-wine-habitat-ena-xechoristo-boutique-xenodocheio-me-atmosfairiko-kelari-stin-kardia-tis-nemeas",
+                cta: "Δες Εδώ →"
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/semeli.webp",
                 alt: "Semeli Estate",
                 kicker: "Νεμέα",
                 h3: "Semeli Estate",
                 content: "Σύγχρονο οινοποιείο με εγκαταστάσεις και εμπειρίες μέσα στους αμπελώνες.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                link: "https://www.youweekly.gr/article/entertainment/travel/semeli-estate-ena-oinopoieio-kosmima-sti-nemea-pou-apogeionei-tin-ebeiria-tou-oinotourismou",
+                cta: "Δες Εδώ →"
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/gaia.webp",
                 alt: "Gaia Wines",
                 kicker: "Νεμέα",
                 h3: "Gaia Wines",
                 content: "Ένα πρωτοποριακό οινοποιείο που αναδεικνύει τον πλούτο του ελληνικού αμπελώνα μέσα από ξεχωριστές ετικέτες.",
-                // link: "https://amyntaswines.gr/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/aoton_logο.webp",
-                alt: "Tzivani Bio Wines",
-                kicker: "Ριτσώνα Αυλίδας",
-                h3: "Tzivani Bio Wines",
-                content: "Βιολογική οινοποιία στην ευρύτερη περιοχή της Χαλκίδας.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
-            },
-            {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/evinos.webp",
-                alt: "Κτήμα Πετρήεσσα",
-                kicker: "Βαθύ Αυλίδας",
-                h3: "Κτήμα Πετρήεσσα",
-                content: "Μια ακόμη οινοποιητική στάση στην ευρύτερη οινική διαδρομή της περιοχής.",
-                // link: "https://aoton.gr/el/%CE%BF%CE%B9%CE%BD%CE%BF%CF%80%CE%BF%CE%B9%CE%B5%CE%AF%CE%BF/",
-                // cta: "Επίσημη ιστοσελίδα →"
+                link: "https://www.youweekly.gr/article/entertainment/travel/gaia-wines-i-ellada-tou-krasiou-apo-tis-plagies-tis-nemeas-mechri-tin-ifaistieaki-santorini",
+                cta: "Δες Εδώ →"
             },
         ],
+        seeAlso: [
+            {
+                name: "Tzivani Bio Wines",
+            },
+            {
+                name: "Κτήμα Πετρήεσσα",
+            },
+        ]
     },
     experience: {
         h2: "Η εμπειρία πέρα από το ποτήρι",
