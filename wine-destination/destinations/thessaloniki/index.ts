@@ -23,7 +23,7 @@ export default {
         state: "Θεσσαλονίκη",
         h1: "Από τους αμπελώνες της Επανομής στα πιο ξεχωριστά wine spots της <em>Θεσσαλονίκης</em>",
         lead: "Από τους αμπελώνες της Επανομής μέχρι τα σύγχρονα wine bars του κέντρου, η Θεσσαλονίκη συνδυάζει το καλό κρασί με τη γαστρονομία, την ιστορία και την κοσμοπολίτικη ατμόσφαιρα.",
-        image: "",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kentriki-epanomiolympos.webp",
     },
     facts: [
         {
@@ -44,7 +44,7 @@ export default {
         },
     ],
     destination: {
-        image: "https://www.youweekly.gr/wp-content/uploads/2026/10/abeliattica-small.webp",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/proorismos-thessaloniki.webp",
         alt: "Αμπελώνας της Θεσσαλονίκης",
         h2: "Ο αμπελώνας της περιοχής και τα μυστικά του terroir",
         content: "Οι αμπελώνες της Θεσσαλονίκης απλώνονται από την Επανομή και τις ακτές του Θερμαϊκού μέχρι το Καλοχώρι και τις ορεινές περιοχές του Λαγκαδά. Το μεσογειακό κλίμα, οι θαλάσσιες αύρες και οι διαφορετικές εδαφικές συνθήκες ευνοούν την καλλιέργεια ελληνικών και διεθνών ποικιλιών. Η περιοχή έχει αναδειχθεί σε σημαντικό οινικό προορισμό, με σύγχρονα οινοποιεία, διεθνείς διακρίσεις και οργανωμένες γευσιγνωσίες.",
@@ -55,15 +55,15 @@ export default {
         content: "Για την επίσκεψή σου απαιτείται προηγούμενη επικοινωνία, καθώς τα προγράμματα και το κόστος γευσιγνωσίας ενδέχεται να αλλάζουν.",
         dest: "Θεσσαλονίκη",
         wineries: [
-            // {
-            //     image: "https://www.youweekly.gr/wp-content/uploads/2026/11/oinopoieia-allagianni.webp",
-            //     alt: "Gaia Wines",
-            //     kicker: "Σαντορίνη",
-            //     h3: "Gaia Wines",
-            //     content: "Ένα πρωτοποριακό οινοποιείο που αναδεικνύει τον πλούτο του ελληνικού αμπελώνα μέσα από ξεχωριστές ετικέτες.",
-            //     link: "https://amyntaswines.gr/",
-            //     cta: "Επίσημη ιστοσελίδα →"
-            // },
+            {
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/spiropoulou.webp",
+                alt: "Οινοποιείο Σπυρόπουλου",
+                kicker: "Θεσσαλονίκη",
+                h3: "Οινοποιείο Σπυρόπουλου",
+                content: "Ένα πρωτοποριακό οινοποιείο που αναδεικνύει τον πλούτο του ελληνικού αμπελώνα μέσα από ξεχωριστές ετικέτες.",
+                // link: "https://amyntaswines.gr/",
+                // cta: "Επίσημη ιστοσελίδα →"
+            },
             // {
             //     image: "https://www.youweekly.gr/wp-content/uploads/2026/11/aoton_logο.webp",
             //     alt: "Tzivani Bio Wines",
@@ -102,13 +102,13 @@ export default {
         h2: "Η εμπειρία πέρα από το ποτήρι",
         feature: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/meat-576x470-1.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/windowmain.webp",
                 eyebrow: "Wine & Dine",
                 h3: "Γευστικές στάσεις",
-                content: "Το Window No.56, στην Προξένου Κορομηλά 56, φέρνει μια διαφορετική πρόταση στην πόλη: το πρώτο wine window της Ελλάδας, εμπνευσμένο από τα ιστορικά παράθυρα κρασιού της Φλωρεντίας, προσφέρει κρασί μέσα από ένα μικρό παράθυρο στον δρόμο, ενώ στο κέντρο της Θεσσαλονίκης, το Maitr & Margarita συνδυάζει τη δημιουργική κουζίνα με ενδιαφέρουσες οινικές επιλογές." 
+                content: "Το <a href='https://www.youweekly.gr/article/entertainment/travel/window-no-56-to-proto-wine-window-tis-elladas-fernei-ti-mageia-tou-krasiou-se-ena-mikro-parathyro-sti-thessaloniki' >Window No.56</a>, στην Προξένου Κορομηλά 56, φέρνει μια διαφορετική πρόταση στην πόλη: το πρώτο wine window της Ελλάδας, εμπνευσμένο από τα ιστορικά παράθυρα κρασιού της Φλωρεντίας, προσφέρει κρασί μέσα από ένα μικρό παράθυρο στον δρόμο, ενώ στο κέντρο της Θεσσαλονίκης, το Maitr & Margarita συνδυάζει τη δημιουργική κουζίνα με ενδιαφέρουσες οινικές επιλογές." 
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/riviera576x470.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/stay-thessaloniki.webp",
                 eyebrow: "Stay & Wine",
                 h3: "Διαμονή στη Θεσσαλονίκη",
                 list: [

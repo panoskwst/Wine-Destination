@@ -42,6 +42,34 @@ const {h2, list} = Astro.props;
         padding: 15px;
     }
 </style>
+<style>
+  /* calendar */
+  :global(.cal-header) { display: flex; align-items: center; justify-content: space-between; margin-bottom: .5rem; }
+  :global(.cal-title) { font-weight: 600; text-transform: capitalize; }
+  :global(.cal-nav) { border: 1px solid var(--border); background: none; border-radius: 6px; width: 2rem; height: 2rem; cursor: pointer; }
+  :global(.cal-grid) { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+  :global(.cal-weekday) { text-align: center; font-size: .75rem; color: var(--muted); padding: .25rem 0; text-transform: capitalize; }
+  :global(.cal-day) { position: relative; text-align: center; padding: .6rem 0; border-radius: 6px; font-size: .9rem; }
+  :global(.cal-today) { outline: 1px solid var(--accent); }
+  :global(.has-event) { background: var(--accent); font-weight: 600; cursor: pointer; }
+
+  /* tooltip */
+  :global(.cal-tip) { display: none; position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+             background: #222; color: #fff; padding: .4rem .6rem; border-radius: 6px; font-size: .8rem;
+             font-weight: 400; white-space: nowrap; z-index: 10; text-align: left; }
+  :global(.has-event:hover .cal-tip, .has-event:focus .cal-tip) { display: block; }
+  /* keep tooltips inside the grid on the first/last columns */
+  :global(.cal-grid > :nth-child(7n)   .cal-tip) { left: auto; right: 0; transform: none; }
+  :global(.cal-grid > :nth-child(7n+1) .cal-tip) { left: 0; transform: none; }
+
+  /* upcoming */
+  :global(.up-list) { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+  :global(.up-item) { border-left: 3px solid var(--accent); padding-left: .75rem; }
+  :global(.up-date) { font-size: .8rem; color: var(--muted); }
+  :global(.up-title) { margin: .1rem 0; font-size: 1.05rem; }
+  :global(.up-location) { font-size: .85rem; color: var(--muted); }
+  :global(.up-desc) { margin: .3rem 0 0; font-size: .9rem; }
+</style>
 <script type="module">
 import { parse, undefined } from "astro:schema";
 
@@ -210,5 +238,5 @@ import { parse, undefined } from "astro:schema";
     });
 </script>
 
-<!-- <section><div id="calendar"></div></section>
-<section><h2>Upcoming events</h2><div id="upcoming"></div></section> -->
+<section><div id="calendar"></div></section>
+<section><h2>Upcoming events</h2><div id="upcoming"></div></section>

@@ -1,4 +1,6 @@
 ---
+import { parseInlineHtml } from "../utils/formatters";
+
 interface Feature {
     h3: string;
     content?: string;
@@ -25,15 +27,36 @@ const {h2, features} = Astro.props;
                     <div class="feature-content">
                         <p class="eyebrow">{eyebrow}</p>
                         <h3>{h3}</h3>
-                        {content && <p>{content}</p>}
+                        {content && (
+                            <p>
+                                {parseInlineHtml(content).map((part) => {
+                                    if (part.type === "bold") {
+                                        return <b>{part.content}</b>;
+                                    }
+
+                                    if (part.type === "link") {
+                                        return <a {...part.attributes}>{part.content}</a>;
+                                    }
+
+                                    return part.content;
+                                })}
+                            </p>
+                        )}
                         {list && (
                             <ul class="list-clean">
                                 {list.map((item) => (
                                     <li>
-                                        {item.split(/(<b>.*?<\/b>)/g).map((part) =>
-                                            part.startsWith("<b>") && part.endsWith("</b>")
-                                                ? <b>{part.slice(3, -4)}</b> : part
-                                        )}
+                                        {parseInlineHtml(item).map((part) => {
+                                            if (part.type === "bold") {
+                                                return <b>{part.content}</b>;
+                                            }
+
+                                            if (part.type === "link") {
+                                                return <a {...part.attributes}>{part.content}</a>;
+                                            }
+
+                                            return part.content;
+                                        })}
                                     </li>
                                 ))}
                             </ul>

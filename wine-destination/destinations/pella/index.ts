@@ -23,7 +23,7 @@ export default {
         state: "Πέλλα",
         h1: "Η Πέλλα αποκαλύπτει την ξεχωριστή οινική της <em>ταυτότητα</em>",
         lead: "ΗΑπό την Αρχαία Πέλλα και τους αμπελώνες της Αλμωπίας μέχρι τα Λουτρά Πόζαρ, μια διαδρομή που συνδυάζει κρασί, ιστορία, γαστρονομία και φύση.",
-        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kentriki-Rhodos-3.webp",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kentriki-pella.webp",
     },
     facts: [
         {
@@ -44,7 +44,7 @@ export default {
         },
     ],
     destination: {
-        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/proorismos-rhodos-2-Attavyros-mountain.webp",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/proorismos-pella.webp",
         alt: "Αμπελώνας της Πέλλας",
         h2: "Ο αμπελώνας της περιοχής και τα μυστικά του terroir",
         content: "Ο αμπελώνας της Πέλλας εκτείνεται από τις πεδινές περιοχές των Γιαννιτσών μέχρι την ορεινότερη Αλμωπία, στους πρόποδες του Βόρα. Οι διαφορετικές εδαφικές και κλιματικές συνθήκες δημιουργούν ένα ποικιλόμορφο αμπελουργικό τοπίο, που ευνοεί την καλλιέργεια ελληνικών και διεθνών ποικιλιών. Η περιοχή διαθέτει από το 1995 την ένδειξη ΠΓΕ Πέλλα, αναδεικνύοντας τη σύγχρονη οινική της ταυτότητα.",
@@ -81,13 +81,13 @@ export default {
         h2: "Η εμπειρία πέρα από το ποτήρι",
         feature: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/eat-rhodos-2.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/eat-pella.webp",
                 eyebrow: "Wine & Dine",
                 h3: "Γευστικές στάσεις",
                 content: "Στην Έδεσσα, οι γαστρονομικές επιλογές συνδυάζονται ιδανικά με μια βόλτα στους περίφημους καταρράκτες. Στην Όρμα και το Λουτράκι, κοντά στα Λουτρά Πόζαρ, οι παραδοσιακές ταβέρνες προσφέρουν αυθεντικές μακεδονικές γεύσεις, όπως ντόπια κρέατα, χειροποίητες πίτες, τυριά, πιπεριές και τοπικά ζυμαρικά, που συνοδεύονται εξαιρετικά από κρασιά της Πέλλας." 
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/stay-rhodos.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/stay-pella.webp",
                 eyebrow: "Stay & Wine",
                 h3: "Διαμονή στην Πέλλα",
                 list: [

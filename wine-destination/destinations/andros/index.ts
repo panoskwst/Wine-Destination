@@ -23,7 +23,7 @@ export default {
         state: "Άνδρος",
         h1: "Η Άνδρος αποκαλύπτει την ξεχωριστή οινική <em>της ταυτότητα</em>",
         lead: "Από τα αιωνόβια αμπέλια και τις σπάνιες τοπικές ποικιλίες μέχρι τα boutique οινοποιεία, η Άνδρος συνδυάζει το κρασί με τη φύση, την παράδοση και τη γαστρονομία.",
-        Image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kentriki-evoia.webp",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kentriki-Andros.webp",
     },
     facts: [
         {
@@ -44,7 +44,7 @@ export default {
         },
     ],
     destination: {
-        image: "https://www.youweekly.gr/wp-content/uploads/2026/10/abeliattica-small.webp",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/proorismos-andros.webp",
         alt: "Αμπελώνας στην Άνδρο",
         h2: "Ο αμπελώνας της περιοχής και τα μυστικά του terroir",
         content: "Οι αμπελώνες της Άνδρου απλώνονται από τις πετρόχτιστες αναβαθμίδες κοντά στη θάλασσα μέχρι τις ορεινές, ανεμοδαρμένες πλαγιές, σε υψόμετρα που ξεπερνούν τα 500 μέτρα. Οι θαλάσσιες αύρες, το μελτέμι και οι διαφορετικές κλιματικές συνθήκες δημιουργούν ιδιαίτερα μικροκλίματα. Τα παλιά αυτόρριζα κλήματα, οι μικρές παραγωγές και οι παραδοσιακές μέθοδοι οινοποίησης διατηρούν ζωντανή την οινική ιστορία του νησιού.",
@@ -84,13 +84,13 @@ export default {
         h2: "Η εμπειρία πέρα από το ποτήρι",
         feature: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/eat-evoia.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/eat-andros.webp",
                 eyebrow: "Wine & Dine",
                 h3: "Γευστικές στάσεις",
                 content: "Στον Όρμο Κορθίου, η Λιθοδομή συνδυάζει ανδριώτικες γεύσεις με τοπικές οινικές ετικέτες, ενώ το Dolly's Bar & Restaurant, στο Micra Anglia της Χώρας, ξεχωρίζει για την οργανωμένη κάβα και τις δυνατότητες wine tasting. Στο Μπατσί, η παραδοσιακή Ταβέρνα Σταμάτης προσφέρει χαρακτηριστικά πιάτα του νησιού, όπως φρουτάλια και κόκορα με μακαρόνια, συνοδευμένα από επιλεγμένα ελληνικά κρασιά." 
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/stay-evoia.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/stay-andros.webp",
                 eyebrow: "Stay & Wine",
                 h3: "Διαμονή στη Χαλκίδα και την Ερέτρια",
                 list: [
