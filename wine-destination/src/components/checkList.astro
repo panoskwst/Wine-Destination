@@ -49,15 +49,16 @@ const {h2, list} = Astro.props;
   :global(.cal-nav) { border: 1px solid var(--border); background: none; border-radius: 6px; width: 2rem; height: 2rem; cursor: pointer; }
   :global(.cal-grid) { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
   :global(.cal-weekday) { text-align: center; font-size: .75rem; color: var(--muted); padding: .25rem 0; text-transform: capitalize; }
-  :global(.cal-day) { position: relative; text-align: center; padding: .6rem 0; border-radius: 6px; font-size: .9rem; }
+  :global(.cal-day) { height: 130px; border: 1px solid; position: relative; text-align: left; padding: .6rem 0; border-radius: 6px; font-size: 1.5rem; }
   :global(.cal-today) { outline: 1px solid var(--accent); }
   :global(.has-event) { background: var(--accent); font-weight: 600; cursor: pointer; }
 
   /* tooltip */
-  :global(.cal-tip) { display: none; position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
-             background: #222; color: #fff; padding: .4rem .6rem; border-radius: 6px; font-size: .8rem;
-             font-weight: 400; white-space: nowrap; z-index: 10; text-align: left; }
-  :global(.has-event:hover .cal-tip, .has-event:focus .cal-tip) { display: block; }
+  :global(.cal-tip-item) { position: relative; background: #222; color: #fff; padding: .4rem .6rem; border-radius: 6px; font-size: .8rem;
+             font-weight: 400; white-space: nowrap; text-align: left; }
+  :global(.cal-tip-description) { display: none; position: absolute; left: 100%; top:0; z-index:10; width: fit-content; padding: 10px; background: #f7f1e8; color: #333; border-radius: 5px; font-size: 1rem;}
+  :global(.cal-tip-item:hover .cal-tip-description, .cal-tip-item:focus-within .cal-tip-description) {display: block; }
+  :global(.is-active .cal-tip-description) { display: block;}
   /* keep tooltips inside the grid on the first/last columns */
   :global(.cal-grid > :nth-child(7n)   .cal-tip) { left: auto; right: 0; transform: none; }
   :global(.cal-grid > :nth-child(7n+1) .cal-tip) { left: 0; transform: none; }
@@ -71,7 +72,6 @@ const {h2, list} = Astro.props;
   :global(.up-desc) { margin: .3rem 0 0; font-size: .9rem; }
 </style>
 <script type="module">
-import { parse, undefined } from "astro:schema";
 
     const pad = (n) => String(n).padStart(2, "0");
     const toISO = (year, monthIndex, day) => `${year}-${pad(monthIndex + 1)}-${pad(day)}`;
@@ -171,9 +171,21 @@ import { parse, undefined } from "astro:schema";
                     cell.classList.add("has-event");
                     cell.tabIndex = 0;
                     cell.setAttribute("aria-label", `${d}: ${dayEvents.map((e) => e.title).join(", ")}`);
-                    const tip = el("div", "cal-tip");
-                    dayEvents.forEach((e) => tip.append(el("div", "cal-tip-item", e.title)));
-                    cell.append(tip);
+                    dayEvents.forEach((e) => {
+                        const item = el("div", "cal-tip-item");
+                        const title = el("div", "cal-tip-title", e.title);
+                        console.log(title);
+                        const description = el("div", "cal-tip-description", e.description);
+                        console.log(description);
+
+                        item.append(title, description);
+
+                        item.addEventListener("click", () => {
+                            item.classList.toggle("is-active");
+                        });
+
+                        cell.append(item);
+                    });
                 }
                 grid.append(cell);
             }
@@ -216,7 +228,8 @@ import { parse, undefined } from "astro:schema";
 
     export async function initEvents({ apiBase, calendar, upcoming, locale = "en-GB", upcomingCount = 3 }) {
         try {
-            const events = await fetchEvents(apiBase, {username: "youweekly", password: "3aJgaJE1471-J5mwrRN-aaW", });
+            const events = await fetchEvents(apiBase);
+            console.log(events);
             if (calendar) createCalendar(calendar, events, { locale });
             if (upcoming) renderUpcoming(upcoming, events, { locale, count: upcomingCount });
             return events;
@@ -238,5 +251,5 @@ import { parse, undefined } from "astro:schema";
     });
 </script>
 
-<section><div id="calendar"></div></section>
-<section><h2>Upcoming events</h2><div id="upcoming"></div></section>
+<!-- <section><div id="calendar"></div></section>
+<section><h2>Upcoming events</h2><div id="upcoming"></div></section> -->

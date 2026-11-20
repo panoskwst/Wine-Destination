@@ -23,7 +23,7 @@ export default {
         state: "Μεσόγεια",
         h1: "Στα μονοπάτια <em>του κρασιού</em>",
         lead: "Τα Μεσόγεια Αττικής αποκαλύπτουν μια λιγότερο γνωστή πλευρά της πρωτεύουσας, άρρηκτα συνδεδεμένη με την ιστορία του ελληνικού κρασιού",
-        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/photo-1506377247377-2a5b3b417ebb.avif",
+        image: "https://www.youweekly.gr/wp-content/uploads/2026/11/mesogeia.webp",
     },
     facts: [
         {
@@ -67,43 +67,76 @@ export default {
         ],
         seeAlso: [
             {
-                name: "Οινοποιία Αλλαγιάννη",
+                name: "Οινοποιείο Νικολού Κορωπί",
             },
             {
-                name: "Anagnostou Winery",
+                name: "Κτήμα Ρωξάνη Μάτσα Κάντζα – Παιανία",
             },
             {
-                name: "Aoton Winery",
+                name: "Οινοποιείο Γκίκας Σπάτα",
             },
             {
-                name: "Evinos Estate",
+                name: "Οικογένεια Γεώργα / Georgas Family Σπάτα",
             },
             {
-                name: "Georgas Family",
+                name: "Οινοποιείο Λιέπουρη Κερατέα",
             },
             {
-                name: "Gikas Winery",
+                name: "Μικροοινοποιία Μυλωνά Κερατέα",
             },
             {
-                name: "Koropi Winemaking Cooperative",
+                name: "Αμπελώνες Μάρκου Παιανία",
             },
             {
-                name: "Markou Vineyards",
+                name: "Οινοποιείο Άωτον Παιανία",
             },
             {
-                name: "Nikolou Winery",
+                name: "Οινοποιείο Το Πατητήρι / Παπαγιάννη Παλλήνη",
             },
             {
-                name: "Papachristou Cellar",
+                name: "Κτήμα Εύοινος / Evinos Σπάτα",
             },
             {
-                name: "Petreza Tower",
+                name: "Οινοποιητικός Συνεταιρισμός Κορωπίου Κορωπί",
             },
             {
-                name: "Roxani Matsa Estate",
+                name: "Zeginis Winery / Ζεγκίνης Μαραθώνας",
             },
             {
-                name: "Vassiliou Winery",
+                name: "Οινότρια Γη – Κώστα Λαζαρίδη Καπανδρίτι",
+            },
+            {
+                name: "Κτήμα Κοκοτού Σταμάτα",
+            },
+            {
+                name: "Kaniaris Winery Ανατολική Αττική",
+            },
+            {
+                name: "Οινοποιείο Παναγιώτου Ανατολική Αττική",
+            },
+            {
+                name: "Στροφιλιά Αττική / Ανάβυσσος",
+            },
+            {
+                name: "Πύργος Πετρέζα Σπάτα",
+            },
+            {
+                name: "Κελάρι Παπαχρήστου Σπάτα / Ανατολική Αττική",
+            },
+            {
+                name: "Οινοποιείο Αλλαγιάννη Μαρκόπουλο",
+            },
+            {
+                name: "Tsouris Wines Αττική",
+            },
+            {
+                name: "Οινοποιείο Βασιλείου Κορωπί / Μεσόγεια",
+            },
+            {
+                name: "Οινοποιία Αναγνώστου Μεσόγεια",
+            },
+            {
+                name: "Οινοποιία Μεγαπάνος Ανατολική Αττική",
             },
         ],
     },

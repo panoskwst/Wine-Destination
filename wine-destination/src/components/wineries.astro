@@ -1,4 +1,6 @@
 ---
+import Index from '../pages/index.astro';
+
 interface Wineries {
     image: string;
     alt: string;
@@ -20,6 +22,10 @@ interface Props {
     seeAlso: SeeAlso[];
 }
 const {h2, content, dest, wineries, seeAlso} = Astro.props;
+const seeAlsoGroups = Array.from(
+    { length: Math.ceil(seeAlso.length / 10) },
+    (_, index) => seeAlso.slice(index * 10, (index + 1) * 10)
+);
 ---
 
 <section class="section-soft" id="wineries">
@@ -42,17 +48,19 @@ const {h2, content, dest, wineries, seeAlso} = Astro.props;
                     </div>
                 </article>
             )}
-            <article class="card">
-                <div class="card-body">
-                    <div class="card-kicker">{dest}</div>
-                    <h3>Επίσης στην περιοχή</h3>
-                    <ul>
-                        {seeAlso.map(({ name }) =>
-                            <li class="winery-list">{name}</li>
-                        )}
-                    </ul>
-                </div>
-            </article>
+            {seeAlsoGroups.map((group) =>(
+                <article class="card">
+                    <div class="card-body">
+                        <div class="card-kicker">{dest}</div>
+                        <h3>Στον οινικό χάρτη της περιοχής ξεχωρίζουν επίσης</h3>
+                        <ul>
+                            {group.map(({ name }) =>
+                                <li class="winery-list">{name}</li>
+                            )}
+                        </ul>
+                    </div>
+                </article>
+            ))}
         </div>
     </div>
 </section>
