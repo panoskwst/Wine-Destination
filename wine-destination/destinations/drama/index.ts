@@ -18,6 +18,10 @@ export default {
             title: "Tips",
             link: "#tips",
         },
+        {
+            title: "Calendar",
+            link: "https://www.youweekly.gr/wine-destination/calendar.html",
+        },
     ],
     hero: {
         state: "Δράμα",
@@ -90,7 +94,7 @@ export default {
         h2: "Η εμπειρία πέρα από το ποτήρι",
         feature: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/eat-Drama.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/drama-wine-dine.webp",
                 eyebrow: "Wine & Dine",
                 h3: "Γευστικές στάσεις",
                 content: "Στη Δράμα, ο Μάγειρας, το S'eu Restaurant στο Hydrama Grand Hotel, το Διώνη στο Hotel Kouros, το La Griglia da Routsis, το Fileto Meat Restaurant και το Rodostamo αποτελούν επιλογές για να συνδυάσετε την οινική διαδρομή με καλό φαγητό." 
@@ -98,7 +102,7 @@ export default {
             {
                 image: "https://www.youweekly.gr/wp-content/uploads/2026/11/stay-Drama.webp",
                 eyebrow: "Stay & Wine",
-                h3: "Διαμονή στα Μεσόγεια",
+                h3: "Διαμονή στη Δράμα",
                 list: [
                     "<b>Hydrama Grand Hotel:</b> Πολυτελής διαμονή σε ιστορικές καπναποθήκες.",
                     "<b>AYA Hotel:</b> Το πεντάστερο ξεχωρίζει για τη γαλλική φινέτσα",
@@ -186,7 +190,7 @@ export default {
         h2: "Το ήξερες ότι;",
         tips: [
             {
-                h3: "🍷 Ιδανική διάρκεια",
+                h3: "⏳ Ιδανική διάρκεια",
                 content: " 2-3 ημέρες για οινοποιεία, γαστρονομία και αξιοθέατα."
             },
             {
@@ -194,23 +198,23 @@ export default {
                 content: "Άνοιξη και φθινόπωρο, με τις «Ανοιχτές Πόρτες» τον Μάιο και τον τρύγο τον Σεπτέμβριο."
             },
             {
-                h3: "🏛️ Wine Experiences",
+                h3: "🍷 Wine Experiences",
                 content: "Vertical tasting, barrel tasting, wine & chocolate pairing και περιηγήσεις στους αμπελώνες."
             },
             {
-                h3: "🏛️ Οινοχώρια",
+                h3: "🍾 Οινοχώρια",
                 content: "Αδριανή, Μικροχώρι, Κοκκινόγεια, Δοξάτο και Προσοτσάνη."
             },
             {
-                h3: "🏛️ Food Pairing",
+                h3: "🧀 Food Pairing",
                 content: "Ερυθρά με κυνήγι και μανιτάρια, λευκά με πέστροφα και θαλασσινά."
             },
             {
-                h3: "🏛️ Χειμερινή απόδραση",
+                h3: "❄️ Χειμερινή απόδραση",
                 content: "Το χιονισμένο Φαλακρό δημιουργεί ένα μοναδικό σκηνικό."
             },
             {
-                h3: "🏛️ Απόσταση",
+                h3: "📍 Απόσταση",
                 content: "Περίπου 1 ώρα και 45 λεπτά από Θεσσαλονίκη και 660 χλμ. από Αθήνα."
             },
         ],

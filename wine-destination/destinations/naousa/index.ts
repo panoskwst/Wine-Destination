@@ -18,6 +18,10 @@ export default {
             title: "Tips",
             link: "#tips",
         },
+        {
+            title: "Calendar",
+            link: "https://www.youweekly.gr/wine-destination/calendar.html",
+        },
     ],
     hero: {
         state: "Νάουσα",
@@ -56,12 +60,12 @@ export default {
         dest: "Νάουσα",
         wineries: [
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/papagiannakos.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/kyrgiannihome.webp",
                 alt: "Κτήμα Κυρ-Γιάννη",
                 kicker: "Νάουσα-Αμύνταιο",
                 h3: "Κτήμα Κυρ-Γιάννη",
                 content: "Οργανωμένες ξεναγήσεις, γευσιγνωσίες και θέα στους αμπελώνες του Βερμίου.",
-                link: "https://www.youweekly.gr/?p=792728&preview=1&_ppp=6944205a7e",
+                link: "https://www.youweekly.gr/article/entertainment/travel/ktima-kyr-gianni-oinotourismos-gefsignosies-kai-gastronomia-se-naousa-kai-amyntaio",
                 cta: "Δες Εδώ →"
             },
         ],
@@ -182,7 +186,7 @@ export default {
         h2: "Το ήξερες ότι;",
         tips: [
             {
-                h3: "🍷 Ιδανική διάρκεια",
+                h3: "⏳ Ιδανική διάρκεια",
                 content: "Τουλάχιστον 2 ημέρες για οινοποιεία, γαστρονομία και αξιοθέατα."
             },
             {
@@ -190,15 +194,15 @@ export default {
                 content: "Σεπτέμβριος–Νοέμβριος, με τον τρύγο και τα εντυπωσιακά φθινοπωρινά χρώματα."
             },
             {
-                h3: "🏛️ Οινοτουριστικές εμπειρίες",
+                h3: "🍷 Οινοτουριστικές εμπειρίες",
                 content: "Γευσιγνωσίες, ξεναγήσεις στους αμπελώνες και δοκιμές παλαιωμένων Ξινόμαυρων."
             },
             {
-                h3: "🏛️ Τα χωριά της διαδρομής",
+                h3: "🏘️ Τα χωριά της διαδρομής",
                 content: "Κοπανός, Στενήμαχος, Μαρίνα, Λευκάδια, Ροδοχώρι, Τρίλοφος, Φυτειά και Γιαννακοχώρι."
             },
             {
-                h3: "🏛️ Food Pairing",
+                h3: "🧀 Food Pairing",
                 content: "Ξινόμαυρο με αγριογούρουνο, αρνάκι στη γάστρα, μανιτάρια και παλαιωμένα τυριά."
             },
             {
@@ -206,11 +210,11 @@ export default {
                 content: "Μια στάση στην ιστορία της ναουσαίικης οινοποιίας, στο παλιό οινοποιείο του Ιωάννη Μπουτάρη."
             },
             {
-                h3: "🏛️ Χειμερινή απόδραση",
+                h3: "❄️ Χειμερινή απόδραση",
                 content: "Συνδυάστε τις επισκέψεις στα οινοποιεία με εξορμήσεις στο Βέρμιο."
             },
             {
-                h3: "🏛️ Απόσταση",
+                h3: "📍 Απόσταση",
                 content: "Περίπου 1 ώρα και 20 λεπτά από Θεσσαλονίκη και 510 χλμ. από Αθήνα."
             },
         ],

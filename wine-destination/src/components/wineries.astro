@@ -1,5 +1,4 @@
 ---
-import Index from '../pages/index.astro';
 
 interface Wineries {
     image: string;
@@ -52,7 +51,7 @@ const seeAlsoGroups = Array.from(
                 <article class="card">
                     <div class="card-body">
                         <div class="card-kicker">{dest}</div>
-                        <h3>Στον οινικό χάρτη της περιοχής ξεχωρίζουν επίσης</h3>
+                        <h4>Στον οινικό χάρτη της περιοχής ξεχωρίζουν επίσης</h4>
                         <ul>
                             {group.map(({ name }) =>
                                 <li class="winery-list">{name}</li>

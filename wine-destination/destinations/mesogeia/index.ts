@@ -18,6 +18,10 @@ export default {
             title: "Tips",
             link: "#tips",
         },
+        {
+            title: "Calendar",
+            link: "https://www.youweekly.gr/wine-destination/calendar.html",
+        },
     ],
     hero: {
         state: "Μεσόγεια",

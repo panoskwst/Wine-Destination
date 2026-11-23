@@ -1,7 +1,13 @@
 ---
+import { parseInlineHtml } from "../utils/formatters";
+
 interface Feature {
     h3: string;
-    content: string;
+    content?: string;
+    list?: string[];
+    image: string;
+    alt: string;
+    eyebrow: string;
 }
 interface Props {
     h2: string;
@@ -16,11 +22,48 @@ const {h2, features} = Astro.props;
             <p class="eyebrow">Γεύση & φιλοξενία</p>
             <h2>{h2}</h2>
         </div>
-        <div class="wide-grid">
-            {features.map(({h3, content}) => 
-                <article>
-                    <h3>{h3}</h3>
-                    <p>{content}</p>
+        <div class="cards">
+            {features.map(({h3, content, list, image, alt, eyebrow}) => 
+                <article class="card">
+                    <img class="card-image" src={image} alt={alt} />
+                    <div class="card-body">
+                        <div class="card-kicker">{eyebrow}</div>
+                        <h3>{h3}</h3>
+                        {content && (
+                            <p>
+                                {parseInlineHtml(content).map((part) => {
+                                    if (part.type === "bold") {
+                                        return <b>{part.content}</b>;
+                                    }
+
+                                    if (part.type === "link") {
+                                        return <a {...part.attributes}>{part.content}</a>;
+                                    }
+
+                                    return part.content;
+                                })}
+                            </p>
+                        )}
+                        {list && (
+                            <ul class="list-clean">
+                                {list.map((item) => (
+                                    <li>
+                                        {parseInlineHtml(item).map((part) => {
+                                            if (part.type === "bold") {
+                                                return <b>{part.content}</b>;
+                                            }
+
+                                            if (part.type === "link") {
+                                                return <a {...part.attributes}>{part.content}</a>;
+                                            }
+
+                                            return part.content;
+                                        })}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
                 </article>
             )}
         </div>
@@ -28,18 +71,8 @@ const {h2, features} = Astro.props;
 </section>
 
 <style>
-    .feature,
-    .day {
-        padding: 30px;
-        border-radius: var(--radius);
-        background: #fff;
-        box-shadow: var(--shadow);
+    #experience .cards {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .feature p,
-    .day li {
-        color: var(--muted);
-    }
-    .day ul {
-        padding-left: 20px;
-    }
+
 </style>

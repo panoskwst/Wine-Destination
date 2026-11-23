@@ -4,7 +4,7 @@ import Hero from "../components/hero.astro";
 import Facts from "../components/facts.astro";
 import Destination from "../components/destination.astro";
 import Wineries from "../components/wineries.astro";
-import Experience from "../components/experience_2.astro";
+import Experience from "../components/experience.astro";
 import SeeMore from "../components/seeMore.astro";
 // import Route from "../components/route.astro";
 import CheckList from "../components/checkList.astro";
@@ -22,7 +22,7 @@ const c = site.checkList;
 const t = site.ykTips;
 ---
 
-<BaseLayout>
+<BaseLayout title={h.state} >
 	<Hero state={h.state} h1={h.h1} lead={h.lead} image={h.image} />
 	<Facts facts={f}  />
 	<Destination image={d.image} alt={d.alt} h2={d.h2} content={d.content} quote={d.quote} />

@@ -18,6 +18,10 @@ export default {
             title: "Tips",
             link: "#tips",
         },
+        {
+            title: "Calendar",
+            link: "https://www.youweekly.gr/wine-destination/calendar.html",
+        },
     ],
     hero: {
         state: "Νεμέα",
@@ -74,7 +78,7 @@ export default {
                 cta: "Δες Εδώ →"
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/gaia.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/gaiapeople.webp",
                 alt: "Gaia Wines",
                 kicker: "Νεμέα",
                 h3: "Gaia Wines",
@@ -182,7 +186,8 @@ export default {
             },
             {
                 name: "Κτήμα Αϊβαλή",
-            },{
+            },
+            {
                 name: "Ieropoulos Family Winery",
             },
             {
@@ -206,12 +211,12 @@ export default {
                 content: "Στη Νεμέα, το Sofos ξεχωρίζει για τη σύγχρονη ελληνική κουζίνα, ενώ το Danaos & Anastasis αποτελεί αγαπημένη επιλογή για παραδοσιακά μαγειρευτά. Το Οίνος και Έλαιος προτείνει κρεατικά και ελληνικές γεύσεις, το Efi's στην Αρχαία Νεμέα είναι ιδανικό μετά την επίσκεψη στον αρχαιολογικό χώρο, ενώ ο Βράχος προσφέρει τοπικές γεύσεις στην πλατεία της Νεμέας." 
             },
             {
-                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/stay-nemea-2.webp",
+                image: "https://www.youweekly.gr/wp-content/uploads/2026/11/keranemehome.webp",
                 eyebrow: "Stay & Wine",
                 h3: "Διαμονή στη Νεμέα",
                 list: [
                     "<b>Terra Vinum Hotel:</b> Επιλογή διαμονής για ένα οινικό Σαββατοκύριακο.",
-                    "<b>Kera Neme Wine Habitat:</b> Φιλοξενία με επίκεντρο το κρασί και την οινική παράδοση.",
+                    "<b><a href='https://www.youweekly.gr/article/entertainment/travel/kera-neme-wine-habitat-i-kyra-tis-nemeas-xerei-ti-simainei-pragmatiki-filoxenia'>Kera Neme Wine Habitat:</a></b> Φιλοξενία με επίκεντρο το κρασί και την οινική παράδοση.",
                     "<b>Semeli Estate Suites:</b> Διαμονή που συνδυάζεται με την οινοτουριστική εμπειρία του κτήματος.",
                     "<b>Naias Nemeia:</b> Επιλογή φιλοξενίας για εξορμήσεις στα οινοποιεία.",
                     "<b>Leon Suites:</b> Διαμονή για την εξερεύνηση της ευρύτερης περιοχής.",
@@ -290,7 +295,7 @@ export default {
         h2: "Το ήξερες ότι;",
         tips: [
             {
-                h3: "🍷 Ιδανική διάρκεια",
+                h3: "⏳ Ιδανική διάρκεια",
                 content: "2 ημέρες για οινοποιεία, γαστρονομία και αρχαιολογικούς χώρους."
             },
             {
@@ -298,15 +303,15 @@ export default {
                 content: "Άνοιξη και φθινόπωρο, με τον Σεπτέμβριο να ξεχωρίζει για τον τρύγο."
             },
             {
-                h3: "🏛️ Οινοτουριστικές εμπειρίες",
+                h3: "🍷 Οινοτουριστικές εμπειρίες",
                 content: "Γευσιγνωσίες, vertical tasting, barrel tasting, wine & cheese pairing και picnic στους αμπελώνες."
             },
             {
-                h3: "🏛️ Τα χωριά της διαδρομής",
+                h3: "🏘️ Τα χωριά της διαδρομής",
                 content: "Νεμέα, Αρχαία Νεμέα, Κούτσι, Πετρί, Αηδόνια, Ψάρι και Ασπρόκαμπος."
             },
             {
-                h3: "🏛️ Food Pairing",
+                h3: "🧀 Food Pairing",
                 content: "Αγιωργίτικο με αρνάκι στη γάστρα, κόκορα κρασάτο, μοσχαρίσια μάγουλα και παλαιωμένα τυριά."
             },
             {
@@ -314,11 +319,11 @@ export default {
                 content: "Στη Νεμέα, σύμφωνα με τη μυθολογία, ο Ηρακλής πραγματοποίησε τον πρώτο του άθλο, νικώντας το Λιοντάρι της Νεμέας."
             },
             {
-                h3: "🏛️ Μια ξεχωριστή ποικιλία",
+                h3: "🍇 Μια ξεχωριστή ποικιλία",
                 content: "Το Αγιωργίτικο μπορεί να δώσει από φρέσκα ερυθρά και ροζέ μέχρι σύνθετα κρασιά μακράς παλαίωσης."
             },
             {
-                h3: "🏛️ Απόσταση",
+                h3: "📍 Απόσταση",
                 content: "Περίπου 1 ώρα και 30 λεπτά από την Αθήνα."
             },
         ],
