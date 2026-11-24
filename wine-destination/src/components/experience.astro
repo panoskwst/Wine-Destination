@@ -6,6 +6,7 @@ interface Feature {
     content?: string;
     list?: string[];
     image: string;
+    link?: string;
     alt: string;
     eyebrow: string;
 }
@@ -23,9 +24,11 @@ const {h2, features} = Astro.props;
             <h2>{h2}</h2>
         </div>
         <div class="cards">
-            {features.map(({h3, content, list, image, alt, eyebrow}) => 
+            {features.map(({h3, content, list, image, link, alt, eyebrow}) => 
                 <article class="card">
-                    <img class="card-image" src={image} alt={alt} />
+                    <a href={link}>
+                        <img class="card-image" src={image} alt={alt} />
+                    </a>
                     <div class="card-body">
                         <div class="card-kicker">{eyebrow}</div>
                         <h3>{h3}</h3>
@@ -73,6 +76,11 @@ const {h2, features} = Astro.props;
 <style>
     #experience .cards {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .card-image {
+        width: 573px;
+        height: 467px;
+        object-fit: cover;
     }
 
 </style>

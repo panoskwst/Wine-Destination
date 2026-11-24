@@ -1,4 +1,6 @@
 ---
+import { parseInlineHtml } from "../utils/formatters";
+
 const {image, alt, h2, content, quote} = Astro.props;
 ---
 
@@ -9,7 +11,23 @@ const {image, alt, h2, content, quote} = Astro.props;
             <p class="eyebrow">Ο Προορισμός</p>
             <h2>{h2}</h2>
             <p>{content}</p>
-            <div class="quote">{quote}</div>
+            <div class="quote">
+                {quote && (
+                    <p>
+                        {parseInlineHtml(quote).map((part) => {
+                            if (part.type === "bold") {
+                                return <b>{part.content}</b>;
+                            }
+
+                            if (part.type === "link") {
+                                return <a {...part.attributes}>{part.content}</a>;
+                            }
+
+                            return part.content;
+                        })}
+                    </p>
+                )}
+            </div>
         </div>
     </div>
 </section>
@@ -34,7 +52,7 @@ const {image, alt, h2, content, quote} = Astro.props;
         padding: 22px 25px;
         border-left: 4px solid var(--wine);
         background: var(--cream);
-        font-family: "Playfair Display", serif;
+        font-family: "georgia";
         font-size: 1.22rem;
         font-style: italic;
     }
