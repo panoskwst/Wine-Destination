@@ -4,9 +4,11 @@ interface Props {
     h1: string;
     lead: string;
     image: string;
+    cta?: string;
+    link?: string;
 }
 
-const {state, h1, lead, image} = Astro.props;
+const {state, h1, lead, image, cta, link} = Astro.props;
 const h1Parts = h1.split(/(<em>.*?<\/em>)/g);
 ---
 
@@ -22,6 +24,9 @@ const h1Parts = h1.split(/(<em>.*?<\/em>)/g);
             )}
         </h1>
         <p class="lead">{lead}</p>
+        { cta && (
+            <a class="btn" href={link}>{cta}</a>
+        ) }
     </div>
 </section>
 <style>
