@@ -82,5 +82,10 @@ const {h2, features} = Astro.props;
         height: 467px;
         object-fit: cover;
     }
+    @media (max-width: 560px) {
+        #experience .cards {
+            grid-template-columns: 1fr;
+        }
+    }
 
 </style>

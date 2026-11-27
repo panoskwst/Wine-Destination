@@ -12,8 +12,10 @@ import pella from "../destinations/pella";
 import rhodes from "../destinations/rhodes";
 import santorini from "../destinations/santorini";
 import thessaloniki from "../destinations/thessaloniki";
+import argolida from "../destinations/argolida";
+import korinthia from "../destinations/korinthia";
 
-const all = {andros, mesogeia, drama, chalkida, florina, karditsa, naAttiki, naousa, nemea, pella, rhodes, santorini, thessaloniki, xanthi};
+const all = {andros, argolida, mesogeia, drama, chalkida, florina, karditsa, korinthia, naAttiki, naousa, nemea, pella, rhodes, santorini, thessaloniki, xanthi};
 const id  = import.meta.env.SITE_ID as keyof typeof all;
 if (!all[id]) throw new Error(`Set SITE_ID to one of: ${Object.keys(all).join(",")}`);
 
